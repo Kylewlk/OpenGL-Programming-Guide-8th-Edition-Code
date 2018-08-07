@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5a66f43b-64b4-43fa-ba30-be75d11a3feb}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>_7_2_1ambient</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>7.2 -1ambient</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\OpenGL.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lib\glew.c" />
+    <ClCompile Include="..\..\lib\LoadShaders.cpp" />
+    <ClCompile Include="..\..\lib\targa.cpp" />
+    <ClCompile Include="..\..\lib\vbm.cpp" />
+    <ClCompile Include="7.2ambient.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\CheckError.h" />
+    <ClInclude Include="..\..\include\GL3\gl3.h" />
+    <ClInclude Include="..\..\include\GL3\gl3w.h" />
+    <ClInclude Include="..\..\include\GL\eglew.h" />
+    <ClInclude Include="..\..\include\GL\freeglut.h" />
+    <ClInclude Include="..\..\include\GL\freeglut_ext.h" />
+    <ClInclude Include="..\..\include\GL\freeglut_std.h" />
+    <ClInclude Include="..\..\include\GL\glcorearb.h" />
+    <ClInclude Include="..\..\include\GL\glew.h" />
+    <ClInclude Include="..\..\include\GL\glext.h" />
+    <ClInclude Include="..\..\include\GL\glut.h" />
+    <ClInclude Include="..\..\include\GL\glxew.h" />
+    <ClInclude Include="..\..\include\GL\wglew.h" />
+    <ClInclude Include="..\..\include\LoadShaders.h" />
+    <ClInclude Include="..\..\include\mat.h" />
+    <ClInclude Include="..\..\include\Shapes\Cube.h" />
+    <ClInclude Include="..\..\include\Shapes\Teapot.h" />
+    <ClInclude Include="..\..\include\vapp.h" />
+    <ClInclude Include="..\..\include\vbm.h" />
+    <ClInclude Include="..\..\include\vec.h" />
+    <ClInclude Include="..\..\include\vermilion.h" />
+    <ClInclude Include="..\..\include\vgl.h" />
+    <ClInclude Include="..\..\include\vmath.h" />
+    <ClInclude Include="..\..\include\vutils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ambient.g" />
+    <None Include="ambient.v" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

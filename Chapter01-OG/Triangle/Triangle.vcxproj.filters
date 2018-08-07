@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{b74da52b-002b-4062-ac40-d4b9addbddd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{ff661462-635b-4a7d-abf7-0ae95296e00f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\CheckError.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\freeglut.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\freeglut_ext.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\freeglut_std.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\glcorearb.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\glew.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\glext.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\glut.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\glxew.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL\wglew.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL3\gl3.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GL3\gl3w.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\LoadShaders.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\mat.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Shapes\Cube.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Shapes\Teapot.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vapp.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vbm.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vec.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vermilion.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vgl.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vmath.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\vutils.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lib\LoadShaders.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\targa.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\vbm.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\glew.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="triangles.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="triangles.vert">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

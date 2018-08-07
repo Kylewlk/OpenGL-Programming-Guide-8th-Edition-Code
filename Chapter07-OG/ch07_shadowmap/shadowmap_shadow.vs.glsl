@@ -1,0 +1,11 @@
+#version 430 core
+
+uniform mat4 model_view_projection_matrix;
+
+layout (location = 0) in vec4 position;
+
+void main(void)
+{
+    gl_Position = model_view_projection_matrix * position;
+	//gl_Position.z += 0.1;
+}
