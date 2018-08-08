@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.2-02Bump-tours", "8.2-02B
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.3.4-01StripesBall", "8.3.4-01StripesBall\8.3.4StripesBall.vcxproj", "{06038574-EFA5-41F4-ACD4-8FED9E13A05A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.3.4-02Test_dFdx_dFdy", "8.3.4-02Test_dFdx_dFdy\8.3.4-02Test_dFdx_dFdy.vcxproj", "{F3AFA5B5-6584-4159-9F90-884A99D51135}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{06038574-EFA5-41F4-ACD4-8FED9E13A05A}.Release|x64.Build.0 = Release|x64
 		{06038574-EFA5-41F4-ACD4-8FED9E13A05A}.Release|x86.ActiveCfg = Release|Win32
 		{06038574-EFA5-41F4-ACD4-8FED9E13A05A}.Release|x86.Build.0 = Release|Win32
+		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Debug|x64.ActiveCfg = Debug|x64
+		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Debug|x64.Build.0 = Debug|x64
+		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Debug|x86.ActiveCfg = Debug|Win32
+		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Debug|x86.Build.0 = Debug|Win32
+		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Release|x64.ActiveCfg = Release|x64
+		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Release|x64.Build.0 = Release|x64
+		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Release|x86.ActiveCfg = Release|Win32
+		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

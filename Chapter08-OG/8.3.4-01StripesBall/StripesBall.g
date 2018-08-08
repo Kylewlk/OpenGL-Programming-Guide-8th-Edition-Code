@@ -31,7 +31,7 @@ void main(void)
 	float edge = 0.0;
 	float dp = fwidth(t);//dp = length(vec2(dFdx(texCoord.s), dFdy(texCoord.s)));	
 	edge = clamp(dp*2.0, 0.0, 0.5);
-	//float square = smoothstep(0.5 -edge, 0.5 +edge, triangle);
+	float square = smoothstep(0.5 -edge, 0.5 +edge, triangle);
 	
 	square = square * square *(3.0- (2.0 * square));	
     BallColor =  BallColor * square;

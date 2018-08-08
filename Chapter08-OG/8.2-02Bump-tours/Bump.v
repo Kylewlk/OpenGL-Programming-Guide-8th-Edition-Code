@@ -3,8 +3,8 @@
 uniform mat4 model_matrix;
 
 layout(location = 0) in vec4 MCVertex;
- layout(location = 1) in vec3 MCNormal;//法线方向
- layout(location = 2) in vec3 MCTangent;//切线方向
+layout(location = 1) in vec3 MCNormal;//法线方向
+layout(location = 2) in vec3 MCTangent;//切线方向
 layout(location = 3) in vec2 TexCoord0;
 
 out vec3 LightDir;
