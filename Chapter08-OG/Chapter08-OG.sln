@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch08_lightmodels", "ch08_lightmodels\ch08_lightmodels.vcxproj", "{92F34249-C995-486A-BA26-AA3A3307AB81}"
 EndProject
@@ -24,6 +24,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.3.4-01StripesBall", "8.3.4-01StripesBall\8.3.4StripesBall.vcxproj", "{06038574-EFA5-41F4-ACD4-8FED9E13A05A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.3.4-02Test_dFdx_dFdy", "8.3.4-02Test_dFdx_dFdy\8.3.4-02Test_dFdx_dFdy.vcxproj", "{F3AFA5B5-6584-4159-9F90-884A99D51135}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.3.4-03BrickConvolution", "8.3.4-03BrickConvolution\8.3.4-03BrickConvolution.vcxproj", "{C227B4E5-D398-4B13-B651-1F8362B08D07}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.3.5-01Checkerboard", "8.3.5Checkerboard\8.3.5Checkerboard.vcxproj", "{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.3.5-02BallCheckerboard", "8.3.5-02BallCheckerboard\8.3.5-02BallCheckerboard.vcxproj", "{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,8 +127,35 @@ Global
 		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Release|x64.Build.0 = Release|x64
 		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Release|x86.ActiveCfg = Release|Win32
 		{F3AFA5B5-6584-4159-9F90-884A99D51135}.Release|x86.Build.0 = Release|Win32
+		{C227B4E5-D398-4B13-B651-1F8362B08D07}.Debug|x64.ActiveCfg = Debug|x64
+		{C227B4E5-D398-4B13-B651-1F8362B08D07}.Debug|x64.Build.0 = Debug|x64
+		{C227B4E5-D398-4B13-B651-1F8362B08D07}.Debug|x86.ActiveCfg = Debug|Win32
+		{C227B4E5-D398-4B13-B651-1F8362B08D07}.Debug|x86.Build.0 = Debug|Win32
+		{C227B4E5-D398-4B13-B651-1F8362B08D07}.Release|x64.ActiveCfg = Release|x64
+		{C227B4E5-D398-4B13-B651-1F8362B08D07}.Release|x64.Build.0 = Release|x64
+		{C227B4E5-D398-4B13-B651-1F8362B08D07}.Release|x86.ActiveCfg = Release|Win32
+		{C227B4E5-D398-4B13-B651-1F8362B08D07}.Release|x86.Build.0 = Release|Win32
+		{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}.Debug|x64.ActiveCfg = Debug|x64
+		{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}.Debug|x64.Build.0 = Debug|x64
+		{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}.Debug|x86.ActiveCfg = Debug|Win32
+		{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}.Debug|x86.Build.0 = Debug|Win32
+		{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}.Release|x64.ActiveCfg = Release|x64
+		{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}.Release|x64.Build.0 = Release|x64
+		{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}.Release|x86.ActiveCfg = Release|Win32
+		{D64EE4D2-272B-484E-A5E5-F4B6B8E2B029}.Release|x86.Build.0 = Release|Win32
+		{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}.Debug|x64.ActiveCfg = Debug|x64
+		{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}.Debug|x64.Build.0 = Debug|x64
+		{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}.Debug|x86.ActiveCfg = Debug|Win32
+		{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}.Debug|x86.Build.0 = Debug|Win32
+		{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}.Release|x64.ActiveCfg = Release|x64
+		{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}.Release|x64.Build.0 = Release|x64
+		{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}.Release|x86.ActiveCfg = Release|Win32
+		{14BFFF09-B81E-441E-8A34-FDAEA4330DE2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2B8A019-329B-4424-BD05-824129D24A6E}
 	EndGlobalSection
 EndGlobal
