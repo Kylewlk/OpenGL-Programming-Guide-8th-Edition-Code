@@ -18,19 +18,20 @@ void main(void)
 {
 	
 	float t = 0.0;
-	float freq = 16.0;
+	float freq = 10.0; //条带数，由于3D模型的纹理坐标不连续，freq = 16.0时无法实现反走样。
 	
 	t = fract(texCoord.s * freq);
 	
 	float triangle = abs(2.0* t - 1.0);
 
-	//float square = step(0.5, triangle);//走样很明显
-	// float square = smoothstep(0.45, 0.55, triangle); //圆心处依然走样
+//	float square = step(0.5, triangle);//走样很明显
+//	float square = smoothstep(0.48, 0.52, triangle); //圆心处依然走样
 
+	//根据像素宽度自动改变反走样宽度
 	float edge = 0.0;
 	float dp = fwidth(t);//dp = length(vec2(dFdx(texCoord.s), dFdy(texCoord.s)));	
-	edge = clamp(dp*3.0, 0.0, 0.5);
-	float square = smoothstep(0.5 -edge, 0.5 +edge, triangle);
+	edge = clamp(dp*2.0, 0.0, 0.5);
+	//float square = smoothstep(0.5 -edge, 0.5 +edge, triangle);
 	
 	square = square * square *(3.0- (2.0 * square));	
     BallColor =  BallColor * square;
