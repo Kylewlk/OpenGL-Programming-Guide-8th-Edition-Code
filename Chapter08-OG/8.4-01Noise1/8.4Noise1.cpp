@@ -22,30 +22,29 @@ float Noise1(int x)//返回一个[-1.0, 1.0]区间内的随机数
 	return (1.0 - ((x * (x * x * 15731 + 789221) + 1376312589) & 0x7fffffff) / (float(0x7fffffff)/2)/*1073741824.0*/);
 }
 
-float SmoothedNoise_1(int x)
+float SmoothedNoise_1(int x) // 平滑随机数，使得随机数不会变化太大
 {
 	return Noise1(x) / 2 + Noise1(x - 1) / 4 + Noise1(x + 1) / 4;
 }
 
-float InterpolatedNoise_1(float x)
+float InterpolatedNoise_1(float x)// 随机数插值，三角函数插值法，使得随机数连续
 {
 
-	int integer_X = int(x);
-	float fractional_X = x - integer_X;
+	int integer_X = int(x);//整数部分
+	float fractional_X = x - integer_X;//小数部分
 	float v1 = SmoothedNoise_1(integer_X);
 	float v2 = SmoothedNoise_1(integer_X + 1);
 
 	float	ft = fractional_X * 3.141592f;
-	float f = (1 - cos(ft)) * 0.5f;
-	return v1*(1 - f) + v2*f;
+	float f = (1 + cos(ft)) * 0.5f;
+	return v2*(1 - f) + v1*f;//插值
 }
 
 float persistence = 1.0f / 1.20f;
 int Number_Of_Octaves = 4;
 
-float PerlinNoise_1D(float x)
+float PerlinNoise_1D(float x) //将不同频率的噪声叠加
 {
-
 	float total = 0;
 	float p = persistence;
 	int n = Number_Of_Octaves;
@@ -54,7 +53,7 @@ float PerlinNoise_1D(float x)
 	for (int i = 1; i <= n; i++)
 	{
 		frequency *= 2.0;
-		amplitude *= p;
+		amplitude *= p; // 频率越高的噪声振幅越小
 		total = total + InterpolatedNoise_1(x * frequency) * amplitude;
 	}
 	return total;
@@ -104,13 +103,15 @@ void display()
 
 
 	glBindVertexArray(Va);
-	float f = 0.0;
+	float ft = 0.0;
+	float n = 0.0;
 	for (int i = 0; i < 200; i++)
 	{
 		Verts[i * 2] = i*1.8 / 200.0f - 0.9f;
 
-		f = PerlinNoise_1D(i * 2 / 200.0f + dt);
-		Verts[i * 2 + 1] = (PerlinNoise_1D(i * 4 / 200.0f)*0.5+f*0.5);
+		ft = PerlinNoise_1D(i * 2 / 200.0f + dt);
+		n = PerlinNoise_1D(i * 4 / 200.0f);
+		Verts[i * 2 + 1] = ( n * 0.5f + ft * 0.5f);
 	}
 	glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(Verts), Verts);
 
