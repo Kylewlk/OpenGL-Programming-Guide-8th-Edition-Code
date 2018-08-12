@@ -183,8 +183,8 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="simple.cont" />
-    <None Include="simple.eval" />
+    <None Include="simple.tesc" />
+    <None Include="simple.tese" />
     <None Include="simple.frag" />
     <None Include="simple.vert" />
   </ItemGroup>

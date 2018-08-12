@@ -55,7 +55,6 @@ init( void )
     glVertexAttribPointer( vPosition, 2, GL_FLOAT, GL_FALSE, 0,
 			   BUFFER_OFFSET(0) );
 
-    PLoc = glGetUniformLocation( program, "P" );
     
     mat4  modelview = Translate( 0.0, 0.0, -0.5*(zNear + zFar) ) * RotateX( -50.0 );
     //mat4 modelview = mat4(1.0);

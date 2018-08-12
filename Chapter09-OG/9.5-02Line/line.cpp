@@ -12,17 +12,17 @@ GLuint vao;
 GLuint vbo;
 
 GLfloat vert[]={ -0.9f, -0.9f,    0.9f, -0.9f,     0.9f, 0.9f,    -0.9f, 0.9f, 
-				1.0, 0.0, 0.0,    0.0, 1.0, 0.0,  0.0, 0.0, 1.0, 0.0, 0.0, 1.0
+				1.0, 0.0, 0.0,    0.0, 1.0, 0.0,  0.0, 0.0, 1.0, 0.0, 1.0, 1.0
 };
 
 
 void init()
 {
 	ShaderInfo si[] = {
-		{ GL_VERTEX_SHADER, "Triangle.v"},
-		{GL_TESS_CONTROL_SHADER, "Triangle.tesc"},
-		{GL_TESS_EVALUATION_SHADER, "Triangle.tese"},
-		{ GL_FRAGMENT_SHADER, "Triangle.g"},
+		{ GL_VERTEX_SHADER, "line.v"},
+		{GL_TESS_CONTROL_SHADER, "line.tesc"},
+		{GL_TESS_EVALUATION_SHADER, "line.tese"},
+		{ GL_FRAGMENT_SHADER, "line.g"},
 		{GL_NONE, ""}
 	};
 

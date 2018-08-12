@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{92F34249-C995-486A-BA26-AA3A3307AB81}</ProjectGuid>
+    <ProjectGuid>{03e75d1b-d540-471d-99d3-912c9f593c69}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>teapot</RootNamespace>
+    <RootNamespace>_9_5Triangel</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>9.5-03Triangel</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -154,7 +155,7 @@
     <ClCompile Include="..\..\lib\LoadShaders.cpp" />
     <ClCompile Include="..\..\lib\targa.cpp" />
     <ClCompile Include="..\..\lib\vbm.cpp" />
-    <ClCompile Include="teapot.cpp" />
+    <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\CheckError.h" />
@@ -183,10 +184,10 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="teapot.tesc" />
-    <None Include="teapot.tese" />
-    <None Include="teapot.frag" />
-    <None Include="teapot.vert" />
+    <None Include="Triangle.g" />
+    <None Include="Triangle.tesc" />
+    <None Include="Triangle.tese" />
+    <None Include="Triangle.v" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

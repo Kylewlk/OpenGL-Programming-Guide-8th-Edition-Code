@@ -112,16 +112,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="teapot.eval">
-      <Filter>源文件</Filter>
-    </None>
     <None Include="teapot.frag">
       <Filter>源文件</Filter>
     </None>
     <None Include="teapot.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="teapot.cont">
+    <None Include="teapot.tesc">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="teapot.tese">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

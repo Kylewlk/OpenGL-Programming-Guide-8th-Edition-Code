@@ -2,6 +2,7 @@
 
 
 layout(triangles, equal_spacing, cw) in;
+//layout(triangles, equal_spacing, cw, point_mode) in;
 
 
 in vec4 TCcolor[];

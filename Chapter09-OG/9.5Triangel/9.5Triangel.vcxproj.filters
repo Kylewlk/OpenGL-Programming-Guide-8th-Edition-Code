@@ -33,7 +33,7 @@
     <ClCompile Include="..\..\lib\glew.c">
       <Filter>lib</Filter>
     </ClCompile>
-    <ClCompile Include="simple.cpp">
+    <ClCompile Include="Triangle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -112,16 +112,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="simple.frag">
+    <None Include="Triangle.tesc">
       <Filter>源文件</Filter>
     </None>
-    <None Include="simple.tesc">
+    <None Include="Triangle.tese">
       <Filter>源文件</Filter>
     </None>
-    <None Include="simple.vert">
+    <None Include="Triangle.v">
       <Filter>源文件</Filter>
     </None>
-    <None Include="simple.tese">
+    <None Include="Triangle.g">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

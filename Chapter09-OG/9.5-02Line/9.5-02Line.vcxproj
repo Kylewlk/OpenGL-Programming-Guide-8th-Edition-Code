@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{92F34249-C995-486A-BA26-AA3A3307AB81}</ProjectGuid>
+    <ProjectGuid>{396f2877-57de-4518-b42a-b5c21802b532}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>teapot</RootNamespace>
+    <RootNamespace>_9_5_02Line</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,7 +154,7 @@
     <ClCompile Include="..\..\lib\LoadShaders.cpp" />
     <ClCompile Include="..\..\lib\targa.cpp" />
     <ClCompile Include="..\..\lib\vbm.cpp" />
-    <ClCompile Include="teapot.cpp" />
+    <ClCompile Include="line.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\CheckError.h" />
@@ -183,10 +183,10 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="teapot.tesc" />
-    <None Include="teapot.tese" />
-    <None Include="teapot.frag" />
-    <None Include="teapot.vert" />
+    <None Include="line.g" />
+    <None Include="line.tesc" />
+    <None Include="line.tese" />
+    <None Include="line.v" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
