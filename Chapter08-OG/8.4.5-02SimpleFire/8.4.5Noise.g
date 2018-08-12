@@ -12,35 +12,48 @@ in vec2 fsPos;
 in vec2 fsTex;
 
 
-float Noise1(int x)//返回一个[-1.0, 1.0]区间内的随机数
+float Noise1(ivec2 n)
 {
+	int x = n[0] +n[1]*57;
 	x = (x << 13) ^ x;
-	return (1.0 - ((x * (x * x * 15731 + 789221) + 1376312589) & 0x7fffffff) / (float(0x7fffffff)/2)/*1073741824.0*/);
+	return (1.0 - ((x * (x * x * 15731 + 789221) + 1376312589) & 0x7fffffff) / 1073741824.0);
 }
 
-float SmoothedNoise_1(int x) // 平滑随机数，使得随机数不会变化太大
+float SmoothedNoise_1(ivec2 x)
 {
-	return Noise1(x)* 4.0 / 10 + Noise1(x - 1) * 2.0 / 10 + Noise1(x + 1) * 2.0 / 10 + Noise1(x - 2) / 10 + Noise1(x + 2) / 10;
+	return Noise1(x) / 2 + Noise1(x - 1) / 4 + Noise1(x + 1) / 4;
 }
 
-float InterpolatedNoise_1(float x)// 随机数插值，三角函数插值法，使得随机数连续
+float Interpolate(float a, float b, float f)
+{
+	float ft = f * 3.1415926;
+	float v = (1- cos(ft)) * 0.5f;
+	return a*(1-v) + b*v;
+}
+
+float InterpolatedNoise_1(vec2 x)
 {
 
-	int integer_X = int(x);//整数部分
-	float fractional_X = x - integer_X;//小数部分
-	float v1 = SmoothedNoise_1(integer_X);
-	float v2 = SmoothedNoise_1(integer_X + 1);
+	ivec2 integer_X = ivec2(x);
+	vec2 fractional_X = x - integer_X;
+	
+	float v1 = SmoothedNoise_1(ivec2(integer_X));
+	float v2 = SmoothedNoise_1(ivec2(integer_X[0]+1, integer_X[1]));
+	float v3 = SmoothedNoise_1(ivec2(integer_X[0], integer_X[1]+1));
+	float v4 = SmoothedNoise_1(ivec2(integer_X[0]+1, integer_X[1]+1));
 
-	float	ft = fractional_X * 3.141592f;
-	float f = (1 + cos(ft)) * 0.5f;
-	return v2*(1 - f) + v1*f;//插值
+	float i1 = Interpolate(v1, v2, fractional_X[0]);
+	float i2 = Interpolate(v3, v4, fractional_X[0]);
+	
+	return Interpolate(i1, i2, fractional_X[1]);
 }
 
-float persistence = 1.0f / 1.20f;
+float persistence = 1.0f / 1.40f;
 int Number_Of_Octaves = 4;
 
-float PerlinNoise_1D(float x) //将不同频率的噪声叠加
+float PerlinNoise_2D(vec2 x)
 {
+
 	float total = 0;
 	float p = persistence;
 	int n = Number_Of_Octaves;
@@ -49,9 +62,10 @@ float PerlinNoise_1D(float x) //将不同频率的噪声叠加
 	for (int i = 1; i <= n; i++)
 	{
 		frequency *= 2.0;
-		amplitude *= p; // 频率越高的噪声振幅越小
+		amplitude *= p;
 		total = total + InterpolatedNoise_1(x * frequency) * amplitude;
 	}
+	
 	return total;
 }
 
@@ -67,10 +81,7 @@ void main()
 	Number_Of_Octaves = 3;
 	
 	Number_Of_Octaves = 6;	
-	float nt = abs(PerlinNoise_1D(fsTex.s + 200.0  + dt));
-	float n = abs(PerlinNoise_1D(fsTex.s))+ 0.2;//通过绝对值模拟火焰。
-
-	n = (n + nt)/2.0;
+	float n = abs(PerlinNoise_2D(vec2(fsTex.s, dt)))+ 0.1;//通过绝对值模拟火焰。
 
 	if(fsPos.y > n)
 		discard;
