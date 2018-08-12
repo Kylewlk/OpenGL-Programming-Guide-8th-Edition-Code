@@ -3,7 +3,7 @@
 
 ## 第三方库
 1. Freegult 地址[https://sourceforge.net/projects/freeglut/](https://sourceforge.net/projects/freeglut/) ,这个库已经编译成静态库文件，Debug版本：lib/freeglut_staticd.lib， release版本：freeglut_static.lib
-2. Glew 地址[http://glew.sourceforge.net/](http://glew.sourceforge.net/) 这个库文件只有两个，程序中直接使用了源码 glew.h/glew.c
+2. Glew 地址[http://glew.sourceforge.net/](http://glew.sourceforge.net/) 这个库文件代码文件只有一个glew.c，程序中直接使用了源码
 
 
 ## 代码说明
