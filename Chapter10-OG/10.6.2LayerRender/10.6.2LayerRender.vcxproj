@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{fad1379c-a8dc-4fa2-bc9d-96373d42ba59}</ProjectGuid>
+    <ProjectGuid>{b34d806b-e4b5-494e-bb47-f1ae1b32ab74}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>_10_6_01FourViewport</RootNamespace>
+    <RootNamespace>_10_6_2LayerRender</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>10.6.1-01FourViewport</ProjectName>
+    <ProjectName>10.6.2-01LayerRender</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -154,7 +154,7 @@
     <ClCompile Include="..\..\lib\glew.c" />
     <ClCompile Include="..\..\lib\LoadShaders.cpp" />
     <ClCompile Include="..\..\lib\targa.cpp" />
-    <ClCompile Include="FourViewport.cpp" />
+    <ClCompile Include="LayerRender.cpp" />
     <ClCompile Include="vbm.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -185,9 +185,11 @@
     <ClInclude Include="vbm.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FourViewport.g" />
-    <None Include="FourViewport.geom" />
-    <None Include="FourViewport.v" />
+    <None Include="LayerRender.frag" />
+    <None Include="LayerRender.geom" />
+    <None Include="LayerRender.vert" />
+    <None Include="render.g" />
+    <None Include="render.v" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
