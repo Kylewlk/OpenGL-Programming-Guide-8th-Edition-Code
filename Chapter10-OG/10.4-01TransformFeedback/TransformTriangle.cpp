@@ -118,7 +118,7 @@ void display()
     glEnable(GL_DEPTH_TEST);
 	if (IsQueen)
 	{
-		glGenQueries(1, q);
+		glGenQueries(2, q);
 		glBeginQueryIndexed(GL_PRIMITIVES_GENERATED, 0, q[1]);
 		glBeginQueryIndexed(GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN, 0, q[0]);
 	}
@@ -140,6 +140,7 @@ void display()
 		cout<< "Primitives Count: " << n << endl;
 		glGetQueryObjectiv(q[1], GL_QUERY_RESULT, &n);
 		cout << "Transform feedback Primitives Count: " << n << endl << endl;
+		glDeleteQueries(2, q);
 	}
 
 
