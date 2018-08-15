@@ -27,7 +27,7 @@ void main()
 
 
 
-//layout(triangles, invocations=4) in;
+//layout(triangles) in;
 //layout(triangle_strip, max_vertices=12) out;
 //
 //uniform mat4 Vmatrix[4];

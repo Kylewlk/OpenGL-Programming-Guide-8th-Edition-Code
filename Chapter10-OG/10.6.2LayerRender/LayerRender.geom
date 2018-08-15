@@ -1,6 +1,6 @@
 #version 430 core
 
-layout(triangles, invocations = 2) in;
+layout(triangles, invocations = 2) in;//必须使用invocations进行分层绘制，直接多次设置gl_Layer无法分层
 layout(triangle_strip, max_vertices=3) out;
 
 in vec3 vs_gs_normal[];
