@@ -6,10 +6,12 @@ layout(triangle_strip, max_vertices=3) out;
 in vec3 vs_gs_normal[];
 
 out vec3 gs_fs_normal;
+out vec4 Color;
 
 void main()
 {
 	float f = gl_InvocationID > 0 ?  -1 : 1;//Õý·´Ãæ
+	Color = gl_InvocationID > 0 ? vec4(0.0, 1.0, 1.0, 1.0) : vec4(1.0);
 	for(int i = 0; i < gl_in.length(); ++i)
 	{
 		gl_Layer = gl_InvocationID;
