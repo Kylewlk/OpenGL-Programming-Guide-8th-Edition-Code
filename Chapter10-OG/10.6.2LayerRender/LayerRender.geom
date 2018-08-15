@@ -1,12 +1,23 @@
-#version 410
-uniform sampler2D tex;
+#version 430 core
 
-layout (location = 0) out vec4 color;
+layout(triangles, invocations = 2) in;
+layout(triangle_strip, max_vertices=3) out;
 
+in vec3 vs_gs_normal[];
 
-in vec3 vs_fs_normal;
+out vec3 gs_fs_normal;
 
-void main(void)
+void main()
 {
-    color = vec4(0.1, 0.1, 0.1, 1.0) + vec4(0.4, 0.4, 0.4, 1.0) * abs(vs_fs_normal.z) + vec4(0.8, 0.8, 0.8, 1.0) * pow(abs(vs_fs_normal.z), 70.0);
+	float f = gl_InvocationID > 0 ?  -1 : 1;//Õý·´Ãæ
+	for(int i = 0; i < gl_in.length(); ++i)
+	{
+		gl_Layer = gl_InvocationID;
+		gl_Position = gl_in[i].gl_Position;
+		gl_Position.z = f*gl_Position.z;
+		gs_fs_normal = vs_gs_normal[i];
+		gs_fs_normal.z = gs_fs_normal.z *f;
+		EmitVertex();
+	}
+	EndPrimitive();
 }
