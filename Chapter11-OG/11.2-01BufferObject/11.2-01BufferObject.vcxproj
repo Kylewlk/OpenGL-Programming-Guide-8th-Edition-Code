@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{92F34249-C995-486A-BA26-AA3A3307AB81}</ProjectGuid>
+    <ProjectGuid>{67e81507-71f3-40d3-8fac-8013a92a18a4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>_11_1ImageTex</RootNamespace>
+    <RootNamespace>_11_2_01BufferObject</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,7 +154,7 @@
     <ClCompile Include="..\..\lib\LoadShaders.cpp" />
     <ClCompile Include="..\..\lib\targa.cpp" />
     <ClCompile Include="..\..\lib\vbm.cpp" />
-    <ClCompile Include="ImageTex.cpp" />
+    <ClCompile Include="BufferObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\CheckError.h" />
@@ -183,10 +183,8 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ImageTex.g" />
-    <None Include="ImageTex.v" />
-    <None Include="show.g" />
-    <None Include="show.v" />
+    <None Include="BufferObject.g" />
+    <None Include="BufferObject.v" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
