@@ -147,8 +147,8 @@ void OverdrawCountExample::InitPrograms()
     // Create the program for rendering the scene from the viewer's position
     ShaderInfo scene_shaders[] =
     {
-        { GL_VERTEX_SHADER, "overdraw_count.vs.glsl" },
-        { GL_FRAGMENT_SHADER, "overdraw_count.fs.glsl" },
+        { GL_VERTEX_SHADER, "overdraw_count.vert" },
+        { GL_FRAGMENT_SHADER, "overdraw_count.frag" },
         { GL_NONE }
     };
 
@@ -165,8 +165,8 @@ void OverdrawCountExample::InitPrograms()
 
     ShaderInfo resolve_shaders[] =
     {
-        { GL_VERTEX_SHADER, "blit.vs.glsl" },
-        { GL_FRAGMENT_SHADER, "blit.fs.glsl" },
+        { GL_VERTEX_SHADER, "blit.vert" },
+        { GL_FRAGMENT_SHADER, "blit.frag" },
         { GL_NONE }
     };
 

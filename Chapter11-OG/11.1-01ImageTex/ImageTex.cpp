@@ -93,7 +93,7 @@ void display()
     glUniformMatrix4fv(glGetUniformLocation(Prog_o, "modelMatrix"), 1, GL_FALSE, modle);
     obj.Render();
 
-	//glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);//在Nvidia显卡上去掉此行代码，图像会有明显瑕疵。
+	//glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);//有些显卡上去掉此行代码，图像会有明显瑕疵。
 
 	GLsync sync = glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
 	glClientWaitSync(sync, GL_SYNC_FLUSH_COMMANDS_BIT, GL_MAX_SERVER_WAIT_TIMEOUT);

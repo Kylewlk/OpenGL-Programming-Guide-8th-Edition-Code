@@ -183,10 +183,10 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="blit.fs.glsl" />
-    <None Include="blit.vs.glsl" />
-    <None Include="overdraw_count.fs.glsl" />
-    <None Include="overdraw_count.vs.glsl" />
+    <None Include="blit.frag" />
+    <None Include="blit.vert" />
+    <None Include="overdraw_count.frag" />
+    <None Include="overdraw_count.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

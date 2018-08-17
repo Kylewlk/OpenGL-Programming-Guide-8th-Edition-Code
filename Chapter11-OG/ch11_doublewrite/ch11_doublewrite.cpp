@@ -150,8 +150,8 @@ void DoubleWriteExample::InitPrograms()
     // Create the program for rendering the scene from the viewer's position
     ShaderInfo scene_shaders[] =
     {
-        { GL_VERTEX_SHADER, "double_write.vs.glsl" },
-        { GL_FRAGMENT_SHADER, "double_write.fs.glsl" },
+        { GL_VERTEX_SHADER, "double_write.vert" },
+        { GL_FRAGMENT_SHADER, "double_write.frag" },
         { GL_NONE }
     };
 
@@ -168,8 +168,8 @@ void DoubleWriteExample::InitPrograms()
 
     ShaderInfo resolve_shaders[] =
     {
-        { GL_VERTEX_SHADER, "blit.vs.glsl" },
-        { GL_FRAGMENT_SHADER, "blit.fs.glsl" },
+        { GL_VERTEX_SHADER, "blit.vert" },
+        { GL_FRAGMENT_SHADER, "blit.frag" },
         { GL_NONE }
     };
 

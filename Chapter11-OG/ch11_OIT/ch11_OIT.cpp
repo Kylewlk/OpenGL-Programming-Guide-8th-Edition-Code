@@ -132,9 +132,9 @@ void OITDemo::Initialize(const char * title)
 
     static const GLfloat quad_verts[] =
     {
-        -1.0f, -1.0f,
+         0.0f, -1.0f,
          1.0f, -1.0f,
-        -1.0f,  1.0f,
+         0.0f,  1.0f,
          1.0f,  1.0f,
     };
 
@@ -154,8 +154,8 @@ void OITDemo::InitPrograms()
     // Create the program for rendering the scene from the viewer's position
     ShaderInfo scene_shaders[] =
     {
-        { GL_VERTEX_SHADER, "build_lists.vs.glsl" },
-        { GL_FRAGMENT_SHADER, "build_lists.fs.glsl" },
+        { GL_VERTEX_SHADER, "build_lists.vert" },
+        { GL_FRAGMENT_SHADER, "build_lists.frag" },
         { GL_NONE }
     };
 
@@ -172,8 +172,8 @@ void OITDemo::InitPrograms()
 
     ShaderInfo resolve_shaders[] =
     {
-        { GL_VERTEX_SHADER, "resolve_lists.vs.glsl" },
-        { GL_FRAGMENT_SHADER, "resolve_lists.fs.glsl" },
+        { GL_VERTEX_SHADER, "resolve_lists.vert" },
+        { GL_FRAGMENT_SHADER, "resolve_lists.frag" },
         { GL_NONE }
     };
 

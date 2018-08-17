@@ -112,16 +112,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="double_write.fs.glsl">
+    <None Include="blit.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="double_write.vs.glsl">
+    <None Include="blit.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="blit.fs.glsl">
+    <None Include="double_write.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="blit.vs.glsl">
+    <None Include="double_write.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>
