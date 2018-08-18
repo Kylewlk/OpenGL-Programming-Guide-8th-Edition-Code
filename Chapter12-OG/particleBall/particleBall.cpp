@@ -46,7 +46,7 @@ void init()
 
 
     ShaderInfo csi[] = {
-        { GL_COMPUTE_SHADER, "particleBall.glsl" },
+        { GL_COMPUTE_SHADER, "particleBall.comp" },
         {GL_NONE, NULL}
     };
     ProgCompure = LoadShaders(csi);

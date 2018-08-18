@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{92F34249-C995-486A-BA26-AA3A3307AB81}</ProjectGuid>
+    <ProjectGuid>{3E656173-4C52-41E0-9EFE-C12FE3334FB1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>particleBall</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -184,7 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="particleBall.g" />
-    <None Include="particleBall.glsl" />
+    <None Include="particleBall.comp" />
     <None Include="particleBall.v" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

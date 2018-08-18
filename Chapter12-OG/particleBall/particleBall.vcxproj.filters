@@ -112,13 +112,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="particleBall.glsl">
-      <Filter>源文件</Filter>
-    </None>
     <None Include="particleBall.v">
       <Filter>源文件</Filter>
     </None>
     <None Include="particleBall.g">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="particleBall.comp">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

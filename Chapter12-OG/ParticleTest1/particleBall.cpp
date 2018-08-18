@@ -36,7 +36,7 @@ void init()
     glGenBuffers(2, vbo);
     glGenTextures(2, tex);
 
-    for (int i = 0; i<2; ++i)
+    for (int i = 0; i<2; ++i)//绘制时不允许改变绘制使用的缓存，不用计算着色器时需要两个纹理缓存，一个用于绘制，一个用来存储改变后的顶点数据。
     {
         glBindVertexArray(vao[i]);
         glBindBuffer(GL_ARRAY_BUFFER, vbo[i]);

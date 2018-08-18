@@ -106,7 +106,7 @@ void ComputeParticleSimulator::Initialize(const char * title)
 
     int i;
 
-    ShaderInfo csi[] = { {GL_COMPUTE_SHADER, "Compute.glsl"}, {GL_NONE, NULL} };
+    ShaderInfo csi[] = { {GL_COMPUTE_SHADER, "Compute.comp"}, {GL_NONE, NULL} };
 
     // Initialize our compute program
     compute_prog = LoadShaders(csi);

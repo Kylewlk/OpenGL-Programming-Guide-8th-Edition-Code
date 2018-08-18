@@ -112,7 +112,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Compute.glsl">
+    <None Include="Compute.comp">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>
