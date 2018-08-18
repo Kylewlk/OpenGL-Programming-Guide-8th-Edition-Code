@@ -112,16 +112,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="blit.vs.glsl">
+    <None Include="blit.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="overdraw_count.fs.glsl">
+    <None Include="blit.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="overdraw_count.vs.glsl">
+    <None Include="overdraw_count.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="blit.fs.glsl">
+    <None Include="overdraw_count.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

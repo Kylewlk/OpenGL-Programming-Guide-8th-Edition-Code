@@ -112,16 +112,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="resolve_lists.vs.glsl">
+    <None Include="resolve_lists.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="build_lists.fs.glsl">
+    <None Include="resolve_lists.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="build_lists.vs.glsl">
+    <None Include="build_lists.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="resolve_lists.fs.glsl">
+    <None Include="build_lists.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

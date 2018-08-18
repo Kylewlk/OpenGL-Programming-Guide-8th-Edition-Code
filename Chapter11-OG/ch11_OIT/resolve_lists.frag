@@ -71,5 +71,5 @@ void main(void)
     }
 
     color = final_color;
-    // color = vec4(float(fragment_count) / float(MAX_FRAGMENTS));
+    //color = vec4(float(fragment_count) / float(MAX_FRAGMENTS));
 }
