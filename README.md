@@ -7,9 +7,10 @@
 
 
 ## 代码说明
-1.	所有程序都在Debug x86 下编译的 
-2.	原书中1-12章节提供的代码都已整理，并修改了其中的一些错误，在“Chapter**-OG”命名的项目中
-3.	增加了一些更加简单易理解的代码，实现了书中未给代码的例子。
+1. 所有程序都在Debug x86 下编译的 
+2. 原书中1-12章节提供的代码都已整理，并修改了其中的一些错误，在“Chapter**-OG”命名的项目中
+3. 增加了一些更加简单易理解的代码，实现了书中未给代码的例子。
+4. Github地址[https://github.com/Kylewlk/OpenGL-Programming-Guide-8th-Edition-Code](https://github.com/Kylewlk/OpenGL-Programming-Guide-8th-Edition-Code)        
 
 
 
