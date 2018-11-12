@@ -40,8 +40,8 @@ init( void )
     // Load shaders and use the resulting shader program
     ShaderInfo  shaders[] = {
 	{ GL_VERTEX_SHADER,          "simple.vert" },
-	{ GL_TESS_CONTROL_SHADER,    "simple.cont" },
- 	{ GL_TESS_EVALUATION_SHADER, "simple.eval" },
+	{ GL_TESS_CONTROL_SHADER,    "simple.tesc" },
+ 	{ GL_TESS_EVALUATION_SHADER, "simple.tese" },
  	{ GL_FRAGMENT_SHADER,        "simple.frag" },
 	{ GL_NONE, NULL }
     };
@@ -55,6 +55,7 @@ init( void )
     glVertexAttribPointer( vPosition, 2, GL_FLOAT, GL_FALSE, 0,
 			   BUFFER_OFFSET(0) );
 
+	PLoc = glGetUniformLocation(program, "P");
     
     mat4  modelview = Translate( 0.0, 0.0, -0.5*(zNear + zFar) ) * RotateX( -50.0 );
     //mat4 modelview = mat4(1.0);

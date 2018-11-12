@@ -40,8 +40,8 @@ init( void )
     // Load shaders and use the resulting shader program
     ShaderInfo  shaders[] = {
 	{ GL_VERTEX_SHADER,          "teapot.vert" },
-	{ GL_TESS_CONTROL_SHADER,    "teapot.cont" },
- 	{ GL_TESS_EVALUATION_SHADER, "teapot.eval" },
+	{ GL_TESS_CONTROL_SHADER,    "teapot.tesc" },
+ 	{ GL_TESS_EVALUATION_SHADER, "teapot.tese" },
  	{ GL_FRAGMENT_SHADER,        "teapot.frag" },
 	{ GL_NONE, NULL }
     };
