@@ -14,5 +14,5 @@ void main(void)
     vec4 pos = (model_matrix * (position * vec4(1.0, 1.0, 1.0, 1.0)));
     vs_fs_normal = normalize((model_matrix * vec4(normal, 0.0)).xyz);
     gl_Position = pos;
-	vs_fs_tex = texCoord;
+	vs_fs_tex = vec2(texCoord.x, 1.0 - texCoord.y);
 }
