@@ -49,8 +49,8 @@ void display()
     vmath::mat4 modle = vmath::mat4::identity();
 
     unsigned int timeNow = GetTickCount();
-    float dt = float((timeNow - Time) % 8000) / 1000.0f;
-    modle *= vmath::rotate(180.0f, vmath::vec3(0.0f, 1.0f, 0.0f));
+    float dt = float((timeNow - Time) ) / 10000.0f;
+    modle *= vmath::rotate(180.0f*dt, vmath::vec3(0.0f, 1.0f, 0.0f));
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
