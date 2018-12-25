@@ -22,8 +22,8 @@ void init()
 {
     ShaderInfo shaders[] =
     {
-        { GL_VERTEX_SHADER, "BufferObject.v" },
-        { GL_FRAGMENT_SHADER, "BufferObject.g" },
+        { GL_VERTEX_SHADER, "BufferObject.vert" },
+        { GL_FRAGMENT_SHADER, "BufferObject.frag" },
         { GL_NONE,"" }
     };
     Program = LoadShaders(shaders);
@@ -69,6 +69,7 @@ void display()
 		IsOutBuf = false;
 		float *fData = nullptr;
 		int *count;
+		glBindBuffer(GL_SHADER_STORAGE_BUFFER, buf);
 		count = (int*)glMapBuffer(GL_SHADER_STORAGE_BUFFER, GL_READ_WRITE);
 		fData = (float*)(count + 1);
 
@@ -98,6 +99,7 @@ void display()
 	if (FrameCount %100 == 1)
 	{
 		int *count;
+		glBindBuffer(GL_SHADER_STORAGE_BUFFER, buf);
 		count = (int*)glMapBuffer(GL_SHADER_STORAGE_BUFFER, GL_READ_WRITE);
 		cout << "count: " << *count << endl;
 		glUnmapBuffer(GL_SHADER_STORAGE_BUFFER);
@@ -134,7 +136,7 @@ int main(int argc, char *argv[])
 
     if (glewInit() != 0)
     {
-        cout << "Unable to initilizate GLEW." << endl;
+        cout << "Unable to initialize GLEW." << endl;
         return 0;
     }
 
