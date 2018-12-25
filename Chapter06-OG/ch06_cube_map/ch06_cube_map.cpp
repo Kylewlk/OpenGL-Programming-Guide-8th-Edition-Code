@@ -176,7 +176,7 @@ void CubeMapExample::Initialize(const char * title)
 
     vglUnloadImage(&image);
 
-    object.LoadFromVBM("../../media/unit_cube.vbm", 0, 1, 2);
+    object.LoadFromVBM("../../media/unit_torus.vbm", 0, 1, 2);
 }
 
 void CubeMapExample::Display(bool auto_redraw)
