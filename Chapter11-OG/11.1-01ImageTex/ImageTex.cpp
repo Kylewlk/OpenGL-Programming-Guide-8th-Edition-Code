@@ -25,8 +25,8 @@ GLuint buffZero;
 void init()
 {
     ShaderInfo si[] = {
-        { GL_VERTEX_SHADER, "show.v" },
-        { GL_FRAGMENT_SHADER, "show.g" },
+        { GL_VERTEX_SHADER, "show.vert" },
+        { GL_FRAGMENT_SHADER, "show.frag" },
         { GL_NONE, "" }
     };
     program = LoadShaders(si);
@@ -40,8 +40,8 @@ void init()
 
 
     ShaderInfo obsi[] = {
-        {GL_VERTEX_SHADER, "ImageTex.v"},
-        {GL_FRAGMENT_SHADER, "ImageTex.g"},
+        {GL_VERTEX_SHADER, "ImageTex.vert"},
+        {GL_FRAGMENT_SHADER, "ImageTex.frag"},
         {GL_NONE, NULL}
     };
     Prog_o = LoadShaders(obsi);
@@ -135,7 +135,7 @@ int main(int argc, char *argv[])
 
     if (glewInit() != 0)
     {
-        cout << "Can not initilizate GLEW" << endl;
+        cout << "Can not initialize GLEW" << endl;
         return 1;
     }
 

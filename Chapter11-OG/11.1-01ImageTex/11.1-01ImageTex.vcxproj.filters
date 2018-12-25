@@ -112,16 +112,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ImageTex.v">
+    <None Include="ImageTex.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="show.g">
+    <None Include="ImageTex.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="show.v">
+    <None Include="show.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="ImageTex.g">
+    <None Include="show.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

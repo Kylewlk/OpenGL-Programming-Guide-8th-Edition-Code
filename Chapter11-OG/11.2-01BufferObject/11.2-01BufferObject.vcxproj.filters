@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BufferObject.g">
+    <None Include="BufferObject.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="BufferObject.v">
+    <None Include="BufferObject.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

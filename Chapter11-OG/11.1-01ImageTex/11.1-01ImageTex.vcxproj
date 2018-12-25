@@ -183,10 +183,10 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ImageTex.g" />
-    <None Include="ImageTex.v" />
-    <None Include="show.g" />
-    <None Include="show.v" />
+    <None Include="ImageTex.frag" />
+    <None Include="ImageTex.vert" />
+    <None Include="show.frag" />
+    <None Include="show.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
