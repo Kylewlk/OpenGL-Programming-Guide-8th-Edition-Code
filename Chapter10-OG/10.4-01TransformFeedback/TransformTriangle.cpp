@@ -150,7 +150,7 @@ void display()
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     glBindVertexArray(vaos[0]);
 	//glDrawArrays(GL_POINTS, 1, 1);
-	glDrawTransformFeedbackStream(GL_TRIANGLES, Tfb, 0);
+	glDrawTransformFeedbackStream(GL_TRIANGLES, Tfb, 0); //绘制的三角形个数与 0中生成的图元相关
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glBindVertexArray(vaos[1]);
