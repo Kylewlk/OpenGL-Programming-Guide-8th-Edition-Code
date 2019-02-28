@@ -26,7 +26,7 @@ void main()
 }
 
 
-
+////不使用invocations限定符，通过循环4次来输出到多个view
 //layout(triangles) in;
 //layout(triangle_strip, max_vertices=12) out;
 //
@@ -38,7 +38,7 @@ void main()
 //
 //void main()
 //{
-//	for(int j = 0; j< 4; ++j)
+//	for(int j = 0; j< 4; ++j)//循环4次
 //	{
 //		for(int i = 0; i < gl_in.length(); ++i)
 //		{
