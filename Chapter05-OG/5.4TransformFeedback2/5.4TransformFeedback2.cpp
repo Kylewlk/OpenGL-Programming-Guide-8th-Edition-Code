@@ -28,7 +28,7 @@ GLuint tb2;
 
 GLuint ProgramPoint = 0;
 
-GLuint vertPoint[2];
+GLuint vaos[2];
 GLuint tbPoint[2];
 
 GLuint TransBack;
@@ -80,8 +80,8 @@ void Init()
 	glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, TransBack1);
 	glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, 0, tbPoint[0]);
 
-	glGenVertexArrays(1, &vertPoint[0]);
-	glBindVertexArray(vertPoint[0]);
+	glGenVertexArrays(1, &vaos[0]);
+	glBindVertexArray(vaos[0]);
 	glBindBuffer(GL_ARRAY_BUFFER, tbPoint[0]);
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
 	glEnableVertexAttribArray(0);
@@ -95,8 +95,8 @@ void Init()
 	glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, TransBack2);
 	glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, 0, tbPoint[1]);
 
-	glGenVertexArrays(1, &vertPoint[1]);
-	glBindVertexArray(vertPoint[1]);
+	glGenVertexArrays(1, &vaos[1]);
+	glBindVertexArray(vaos[1]);
 	glBindBuffer(GL_ARRAY_BUFFER, tbPoint[1]);
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
 	glEnableVertexAttribArray(0);
@@ -113,22 +113,23 @@ void Display()
 	static float RectColor[4] = { 0.0, 0.0, 1.0, 1.0 };
 
     glUseProgram(ProgramSquare);
-    GLuint color = glGetUniformLocation(ProgramSquare, "vColor");
+    GLuint color = glGetUniformLocation(ProgramSquare, "color");
     glUniform4fv(color, 1, RectColor);
 
     glBindVertexArray(vert);
-
     glLineWidth(5.0f);
-
-	glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, TransBack);//使用TransBack对象
-	glBeginTransformFeedback(GL_LINES);
     glDrawArrays(GL_LINE_LOOP, 0, 4);
-	glEndTransformFeedback();
 
 	static bool IsOutTb = true;
 	if (IsOutTb)//读取TransBack对象两个缓存中的值
 	{
 		IsOutTb = false;
+
+		glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, TransBack);//使用TransBack对象
+		glBeginTransformFeedback(GL_LINES);
+		glDrawArrays(GL_LINE_LOOP, 0, 4);
+		glEndTransformFeedback();
+
 		float tbV[8][4] = { 0.0f };
 		glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, tb);
 		glGetBufferSubData(GL_TRANSFORM_FEEDBACK_BUFFER, 0, sizeof(tbV), tbV);
@@ -164,13 +165,13 @@ void Display()
 
 	if ((FrameCount & 1)  == 0)
 	{
-		glBindVertexArray(vertPoint[0]);
+		glBindVertexArray(vaos[0]);
 		glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, TransBack2);
 		glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, tbPoint[1]);
 	}
 	else
 	{
-		glBindVertexArray(vertPoint[1]);
+		glBindVertexArray(vaos[1]);
 		glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, TransBack1);
 		glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, tbPoint[0]);
 	}
@@ -207,7 +208,7 @@ int main(int argc, char*argv[])
     glutInitWindowSize(400, 400);
     glutInitContextVersion(4, 3);
     glutInitContextProfile(GLUT_CORE_PROFILE);
-    glutCreateWindow("Test OpenGL Chapter 04");
+    glutCreateWindow("Test OpenGL");
 
     if (glewInit())
     {

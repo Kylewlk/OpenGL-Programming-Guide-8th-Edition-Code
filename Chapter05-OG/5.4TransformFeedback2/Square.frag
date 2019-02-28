@@ -1,6 +1,6 @@
 #version 430 core
 
-in vec4 color;
+uniform vec4 color;
 
 out vec4 fColor;
 

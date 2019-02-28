@@ -21,13 +21,13 @@ Vertex Verts[4] = { { { 255,0,0,255 },{ 0.5f, 0.5f, 0.0f } },
 
 GLuint ProgramSquare = 0;
 
-GLuint vert;
+GLuint vaoLine;
 GLuint vbo;
-GLuint tb;
+GLuint tb; //只做第一次绘制时输出使用
 
 GLuint ProgramPoint = 0;
 
-GLuint vertPoint[2];
+GLuint vaos[2];
 GLuint tbPoint[2];
 
 GLuint TransBack;
@@ -41,8 +41,8 @@ void Init()
 	glLinkProgram(ProgramSquare);
 
 
-    glGenVertexArrays(1, &vert);
-    glBindVertexArray(vert);
+    glGenVertexArrays(1, &vaoLine);
+    glBindVertexArray(vaoLine);
 
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
@@ -69,8 +69,8 @@ void Init()
 	glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, tbPoint[0]);
 	glBufferData(GL_TRANSFORM_FEEDBACK_BUFFER, sizeof(iPoint), iPoint, GL_DYNAMIC_COPY);
 
-	glGenVertexArrays(1, &vertPoint[0]);
-	glBindVertexArray(vertPoint[0]);
+	glGenVertexArrays(1, &vaos[0]);
+	glBindVertexArray(vaos[0]);
     glBindBuffer(GL_ARRAY_BUFFER, tbPoint[0]);
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
 	glEnableVertexAttribArray(0);
@@ -81,8 +81,8 @@ void Init()
 	glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, tbPoint[1]);
 	glBufferData(GL_TRANSFORM_FEEDBACK_BUFFER, sizeof(iPoint), iPoint, GL_DYNAMIC_COPY);
 
-	glGenVertexArrays(1, &vertPoint[1]);
-	glBindVertexArray(vertPoint[1]);
+	glGenVertexArrays(1, &vaos[1]);
+	glBindVertexArray(vaos[1]);
 	glBindBuffer(GL_ARRAY_BUFFER, tbPoint[1]);
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
 	glEnableVertexAttribArray(0);
@@ -101,21 +101,23 @@ void Display()
 	static float RectColor[4] = { 0.0, 0.0, 1.0, 1.0 };
 
     glUseProgram(ProgramSquare);
-    GLuint color = glGetUniformLocation(ProgramSquare, "vColor");
+    GLuint color = glGetUniformLocation(ProgramSquare, "color");
     glUniform4fv(color, 1, RectColor);
 
-    glBindVertexArray(vert);
-	glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, 0, tb);//使用默认的Transform feedback对象
 
+	glBindVertexArray(vaoLine);
     glLineWidth(5.0f);
-
-	glBeginTransformFeedback(GL_LINES);
-    glDrawArrays(GL_LINE_LOOP, 0, 4);//会绘制四根线最终有八个点
-	glEndTransformFeedback();
+	glDrawArrays(GL_LINE_LOOP, 0, 4);//会绘制四根线最终有八个点
 
 	static bool IsOutTb = true;
 	if (IsOutTb)
 	{
+		glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, 0, tb);//使用默认的Transform feedback对象
+
+		glBeginTransformFeedback(GL_LINES);
+		glDrawArrays(GL_LINE_LOOP, 0, 4);//会绘制四根线最终有八个点
+		glEndTransformFeedback();
+
 		IsOutTb = false;
 		float tbV[8][4] = { 0.0f };//读取矩形框四根线八个点的位置信息。
 		//glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, tb);
@@ -141,12 +143,12 @@ void Display()
 
 	if ((FrameCount % 2)  == 0)
 	{
-		glBindVertexArray(vertPoint[0]);
+		glBindVertexArray(vaos[0]);
 		glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, 0, tbPoint[1]);
 	}
 	else
 	{
-		glBindVertexArray(vertPoint[1]);
+		glBindVertexArray(vaos[1]);
 		glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, 0, tbPoint[0]);
 	}
 	glPointSize(10.0f);
@@ -158,7 +160,7 @@ void Display()
 	float tbV[4] = { 0.0f };
 	glGetBufferSubData(GL_TRANSFORM_FEEDBACK_BUFFER, 0, sizeof(tbV), tbV);//获取最新点的位置
 
-	if (tbV[1] > -0.5 && tbV[1] < 0.5)//根据点的位置改变矩形框的颜色
+	if (tbV[1] > -0.5 && tbV[1] < 0.5)//t[1]为点Y轴的位置，根据点的位置改变矩形框的颜色
 	{
 		RectColor[0] = 1.0;
 		RectColor[1] = 0.0;
@@ -182,7 +184,7 @@ int main(int argc, char*argv[])
     glutInitWindowSize(400, 400);
     glutInitContextVersion(4, 3);
     glutInitContextProfile(GLUT_CORE_PROFILE);
-    glutCreateWindow("Test OpenGL Chapter 04");
+    glutCreateWindow("Test OpenGL");
 
     if (glewInit())
     {

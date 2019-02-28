@@ -68,13 +68,13 @@ void init()
 	glGenVertexArrays(2, vaos);
 	glBindVertexArray(vaos[0]);
 	glBindBuffer(GL_ARRAY_BUFFER, vbos[0]);
-	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(float) * 8, BUFFER_OFFSET(sizeof(float)* 4));
+	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(float) * 8, BUFFER_OFFSET(sizeof(float)* 4));//postion
 	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(float) * 8, BUFFER_OFFSET(0));
+	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(float) * 8, BUFFER_OFFSET(0));//color
 	glEnableVertexAttribArray(1);
 	glBindVertexArray(vaos[1]);
 	glBindBuffer(GL_ARRAY_BUFFER, vbos[1]);
-	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(float) * 8, BUFFER_OFFSET(sizeof(float) * 4));
+	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(float) * 8, BUFFER_OFFSET(sizeof(float) * 4));//postion
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(float) * 8, BUFFER_OFFSET(0));
 	glEnableVertexAttribArray(1);
@@ -113,7 +113,7 @@ void display()
 	static bool IsQueen = true;
 	GLuint q[2];
 
-	glEnable(GL_RASTERIZER_DISCARD);
+	glEnable(GL_RASTERIZER_DISCARD); //∆¡±Œπ‚’§ªØ
     glBindVertexArray(vao);
     glEnable(GL_DEPTH_TEST);
 	if (IsQueen)

@@ -174,7 +174,7 @@ int main(int argc, char *argv[])
     glutInitContextProfile(GLUT_CORE_PROFILE);
     glutInitContextVersion(4, 3);
     glutInitWindowSize(400, 400);
-    glutCreateWindow("Test VBM");
+    glutCreateWindow("Test OpenGL");
 
     if (glewInit() != 0)
     {
