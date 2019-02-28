@@ -12,7 +12,7 @@ void main()
 {
 	float f = gl_InvocationID > 0 ?  -1 : 1;//Õý·´Ãæ
 	Color = gl_InvocationID > 0 ? vec4(0.0, 1.0, 1.0, 1.0) : vec4(1.0);
-	for(int i = 0; i < gl_in.length(); ++i)
+	for(int i = 0; i < gl_PatchVerticesIn; ++i)
 	{
 		gl_Layer = gl_InvocationID;
 		gl_Position = gl_in[i].gl_Position;

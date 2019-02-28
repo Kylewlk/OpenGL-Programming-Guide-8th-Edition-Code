@@ -24,13 +24,12 @@ layout(stream=1) out rVert
 void main()
 {
 	int n = 0;
-	int VertCount = gl_in.length();
 	for(int i = 0; i < 4; ++i)
 	{	
 		for(int j = 0; j < 3; ++j)
 		{
-			lPos = modelMatrix*gl_in[(j+i)%VertCount].gl_Position;
-			lColor = VsGsColor[(j+i)%VertCount];
+			lPos = modelMatrix*gl_in[(j+i)%gl_PatchVerticesIn].gl_Position;
+			lColor = VsGsColor[(j+i)%gl_PatchVerticesIn];
 			gl_Position = lPos;
 			EmitStreamVertex(0);
 			//EmitVertex();
@@ -43,8 +42,8 @@ void main()
 	{
 		for(int j = 0; j < 3; ++j)
 		{
-			rPos = dMatrix * modelMatrix*gl_in[(j+i)%VertCount].gl_Position;
-			rColor = VsGsColor[(j+i)%VertCount] * 0.4;
+			rPos = dMatrix * modelMatrix*gl_in[(j+i)%gl_PatchVerticesIn].gl_Position;
+			rColor = VsGsColor[(j+i)%gl_PatchVerticesIn] * 0.4;
 			gl_Position = rPos;
 			EmitStreamVertex(1);
 		}

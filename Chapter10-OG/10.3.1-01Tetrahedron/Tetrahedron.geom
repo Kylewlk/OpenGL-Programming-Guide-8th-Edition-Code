@@ -14,13 +14,12 @@ flat out vec4 GsColor;
 void main()
 {
 	int n = 0;
-	int VertCount = gl_in.length();
 	for(int i = 0; i < 4; ++i)//输出四个三角形 四个面
 	{	
 		for(int j = 0; j < 3; ++j)
 		{
-			gl_Position = modelMatrix*gl_in[(j+i)%VertCount].gl_Position;
-			GsColor = VsGsColor[(j+i)%VertCount];
+			gl_Position = modelMatrix*gl_in[(j+i)%gl_PatchVerticesIn].gl_Position;
+			GsColor = VsGsColor[(j+i)%gl_PatchVerticesIn];
 			EmitVertex();
 		}
 		EndPrimitive();
