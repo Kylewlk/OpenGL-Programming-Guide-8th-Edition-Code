@@ -2,7 +2,7 @@
 这是OpenGL编程指南（第八版）书中代码，使用VS2015建立的工程。
 
 ## 第三方库
-1. Freegult 地址[https://sourceforge.net/projects/freeglut/](https://sourceforge.net/projects/freeglut/) ,这个库已经编译成静态库文件，Debug版本：lib/freeglut_staticd.lib， release版本：freeglut_static.lib
+1. Freegult 地址[https://sourceforge.net/projects/freeglut/](https://sourceforge.net/projects/freeglut/) ,这个库项目中使用的是静态库，Debug版本：lib/freeglut_staticd.lib， release版本：freeglut_static.lib. 为了方便VS的升级，在/lib/GLUT中还包含了vs2017和2019的编译版本。
 2. Glew 地址[http://glew.sourceforge.net/](http://glew.sourceforge.net/) 这个库文件代码文件只有一个glew.c，程序中直接使用了源码
 
 
