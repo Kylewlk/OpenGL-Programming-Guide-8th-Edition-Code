@@ -40,7 +40,7 @@ void init()
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(float)*2*4));
 	glEnableVertexAttribArray(1);
 
-	glClearColor(0.1, 0.1, 0.1, 1.0);
+	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 }
 
 void display()

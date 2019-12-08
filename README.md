@@ -1,5 +1,5 @@
 ﻿# OpenGL-Programming-Guide-8th-Edition-Code
-这是OpenGL编程指南（第八版）书中代码，使用VS2015建立的工程。
+这是OpenGL编程指南（第八版）书中代码，使用VS2015建立的工程。目标平台版本是8.1，平台工具集是v140。 使用高版本VS打开项目时，如果不想升级可以安装[Windows 8.1 SDK](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive) ，安装v140平台工具集，安装完后启动时如果提示升级，直接点击取消。
 
 ## 第三方库
 1. Freegult 地址[https://sourceforge.net/projects/freeglut/](https://sourceforge.net/projects/freeglut/) ,这个库已经编译成静态库文件，Debug版本：lib/freeglut_staticd.lib， release版本：freeglut_static.lib
