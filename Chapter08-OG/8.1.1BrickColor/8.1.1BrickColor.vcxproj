@@ -187,8 +187,8 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BrickSquare.g" />
-    <None Include="BrickSquare.v" />
+    <None Include="BrickSquare.frag" />
+    <None Include="BrickSquare.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

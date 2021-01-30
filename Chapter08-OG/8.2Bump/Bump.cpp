@@ -10,7 +10,7 @@ GLuint Program;
 float Verts[] = { -0.9, -0.9,   0.9, -0.9,    0.9, 0.9,    -0.9, 0.9 };
 float TexCoord[] = { 0.0, 0.0,   1.0, 0.0,    1.0, 1.0,    0.0, 1.0 };
 
-GLuint Va;
+GLuint vao;
 GLuint vbo;
 
 GLuint LightPos;
@@ -20,16 +20,16 @@ void init()
 {
 	ShaderInfo shaders[] =
 	{
-		{ GL_VERTEX_SHADER, "Bump.v" },
-		{ GL_FRAGMENT_SHADER, "Bump.g" },
+		{ GL_VERTEX_SHADER, "Bump.vert" },
+		{ GL_FRAGMENT_SHADER, "Bump.frag" },
 		{ GL_NONE,"" }
 	};
 	Program = LoadShaders(shaders);
 
 	LightPos = glGetUniformLocation(Program, "LightPosition");
 
-	glGenVertexArrays(1, &Va);
-	glBindVertexArray(Va);
+	glGenVertexArrays(1, &vao);
+	glBindVertexArray(vao);
 	glGenBuffers(1, &vbo);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(Verts)+sizeof(TexCoord), NULL, GL_STATIC_DRAW);
@@ -54,7 +54,7 @@ void display()
 
 	glUniform3fv(LightPos, 1, vmath::vec3(3.0f, 3.0f, -3.0f));
 
-	glBindVertexArray(Va);
+	glBindVertexArray(vao);
 	glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 
 	glutSwapBuffers();

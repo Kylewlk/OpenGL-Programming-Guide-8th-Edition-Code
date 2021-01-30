@@ -184,8 +184,8 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="8.4.4Noise.g" />
-    <None Include="8.4.4Noise.v" />
+    <None Include="8.4.4Noise.frag" />
+    <None Include="8.4.4Noise.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

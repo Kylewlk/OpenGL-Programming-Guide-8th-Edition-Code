@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BrickTex.v">
+    <None Include="BrickTex.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="BrickTex.g">
+    <None Include="BrickTex.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

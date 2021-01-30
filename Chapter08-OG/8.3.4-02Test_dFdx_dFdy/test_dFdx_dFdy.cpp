@@ -13,21 +13,21 @@ float Verts[] = {
      0.4,  0.4,
 };
 
-GLuint Va;
+GLuint vao;
 GLuint vbo;
 
 void init()
 {
     ShaderInfo shaders[] =
     {
-        { GL_VERTEX_SHADER, "test_dFdx_dFdy.v" },
-        { GL_FRAGMENT_SHADER, "test_dFdx_dFdy.g" },
+        { GL_VERTEX_SHADER, "test_dFdx_dFdy.vert" },
+        { GL_FRAGMENT_SHADER, "test_dFdx_dFdy.frag" },
         { GL_NONE,"" }
     };
     Program = LoadShaders(shaders);
 
-    glGenVertexArrays(1, &Va);
-    glBindVertexArray(Va);
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(Verts), Verts, GL_STATIC_DRAW);
@@ -47,7 +47,7 @@ void display()
 
 
     glUseProgram(Program);
-    glBindVertexArray(Va);
+    glBindVertexArray(vao);
 
 	vmath::mat4 view = vmath::translate(-0.5f, 0.5f, 0.0f);
 	glUniformMatrix4fv(0, 1, GL_FALSE, view);

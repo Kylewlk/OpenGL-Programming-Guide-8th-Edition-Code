@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="8.3.5Checkerboard.v">
+    <None Include="8.3.5Checkerboard.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="8.3.5Checkerboard.g">
+    <None Include="8.3.5Checkerboard.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

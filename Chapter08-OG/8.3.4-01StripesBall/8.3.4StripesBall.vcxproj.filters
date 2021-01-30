@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="StripesBall.g">
+    <None Include="StripesBall.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="StripesBall.v">
+    <None Include="StripesBall.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="stripeTex.g">
+    <None Include="stripeTex.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="stripeTex.v">
+    <None Include="stripeTex.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

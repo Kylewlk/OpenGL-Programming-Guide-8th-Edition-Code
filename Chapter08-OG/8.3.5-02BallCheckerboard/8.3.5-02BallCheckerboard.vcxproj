@@ -183,8 +183,8 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="8.3.5Checkerboard.g" />
-    <None Include="8.3.5Checkerboard.v" />
+    <None Include="8.3.5Checkerboard.frag" />
+    <None Include="8.3.5Checkerboard.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

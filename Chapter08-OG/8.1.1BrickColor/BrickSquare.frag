@@ -19,24 +19,25 @@ void main(void)
 	position = fsPos/BrickSize;
 	
 	//这两行与下面if-else代码效果完全一致
-	// if(fract(position.y *0.5) > 0.5)
-		// position.x += 0.5;
-		
-	if (position.y > 0)//X轴上半部分
-	{
-		if(int(position.y)%2 == 1)//奇数行
-		{
-			position.x += 0.5;//使得砖灰MortarColor绘制在砖的中部
-		}
-	}
-	else//X轴下半部分
-	{
-		if(int(position.y)%2 == 0)//偶数行
-		{
-			position.x += 0.5;//使得砖灰MortarColor绘制在砖的中部
-		}
-	}
-			
+	 if(fract(position.y *0.5) > 0.5)
+		 position.x += 0.5;
+
+	//上面两行与下面if-else代码效果完全一致
+//	if (position.y > 0)//X轴上半部分
+//	{
+//		if(int(position.y)%2 == 1)//奇数行
+//		{
+//			position.x += 0.5;//使得砖灰MortarColor绘制在砖的中部
+//		}
+//	}
+//	else//X轴下半部分
+//	{
+//		if(int(position.y)%2 == 0)//偶数行
+//		{
+//			position.x += 0.5;//使得砖灰MortarColor绘制在砖的中部
+//		}
+//	}
+//			
 	position = fract(position);
 	userBrick = step(BrickPct,position);
 	//userBrick = smoothstep(BrickPct, BrickPct2, position);

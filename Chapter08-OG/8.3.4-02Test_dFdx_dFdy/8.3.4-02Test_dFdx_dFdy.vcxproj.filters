@@ -112,10 +112,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="test_dFdx_dFdy.g">
+    <None Include="test_dFdx_dFdy.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="test_dFdx_dFdy.v">
+    <None Include="test_dFdx_dFdy.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

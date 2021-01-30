@@ -184,8 +184,8 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Bump.g" />
-    <None Include="Bump.v" />
+    <None Include="Bump.frag" />
+    <None Include="Bump.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,8 +15,8 @@ void init()
 {
     ShaderInfo shaders[] =
     {
-        { GL_VERTEX_SHADER, "stripeTex.v" },
-        { GL_FRAGMENT_SHADER, "stripeTex.g" },
+        { GL_VERTEX_SHADER, "stripeTex.vert" },
+        { GL_FRAGMENT_SHADER, "stripeTex.frag" },
         { GL_NONE,"" }
     };
     Program = LoadShaders(shaders);

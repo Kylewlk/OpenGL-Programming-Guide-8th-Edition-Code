@@ -27,7 +27,9 @@ void main()
 	vec3 t = normalize(VecTransform * MCTangent);  //x
 	vec3 b = cross(n, t);           //y
 	
-	mat3 VertLocalMat = mat3(t,b,n);
+	//mat3 VertLocalMat = mat3(t,b,n);//矩阵可以将向量或者坐标转换到顶点局部坐标系下
+	//VertLocalMat = transpose(VertLocalMat);
+	mat3 VertLocalMat  = mat3(t.x, b.x, n.x, t.y, b.y,n.y, t.z, b.z, n.z);
 
 	LightDir = normalize(VertLocalMat * LightDirection);
 

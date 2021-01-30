@@ -8,27 +8,27 @@ using namespace std;
 GLuint Program;
 
 float Verts[] = {
-	-0.9, -0.9,   0.9, -0.9,    0.9, 0.9,    -0.9, 0.9 ,
-	0.0, 0.0,     1.0, 0.0,     1.0, 1.0,     0.0, 1.0, 
+	-0.9f, -0.9f,   0.9f, -0.9f,    0.9f, 0.9f,    -0.9f, 0.9f ,
+	0.0f, 0.0f,     1.0f, 0.0f,     1.0f, 1.0f,     0.0f, 1.0f, 
 
 };
 //float Verts[] = { 0.0, 0.0,   0.9, 0.0,    0.9, 0.9,    0.0, 0.9 };
 
-GLuint Va;
+GLuint vao;
 GLuint vbo;
 
 void init()
 {
 	ShaderInfo shaders[] =
 	{
-		{ GL_VERTEX_SHADER, "8.3.5Checkerboard.v" },
-		{ GL_FRAGMENT_SHADER, "8.3.5Checkerboard.g" },
+		{ GL_VERTEX_SHADER, "8.3.5Checkerboard.vert" },
+		{ GL_FRAGMENT_SHADER, "8.3.5Checkerboard.frag" },
 		{ GL_NONE,"" }
 	};
 	Program = LoadShaders(shaders);
 
-	glGenVertexArrays(1, &Va);
-	glBindVertexArray(Va);
+	glGenVertexArrays(1, &vao);
+	glBindVertexArray(vao);
 	glGenBuffers(1, &vbo);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(Verts), Verts, GL_STATIC_DRAW);
@@ -59,7 +59,7 @@ void display()
 	glUniformMatrix4fv(glGetUniformLocation(Program, "VMatrix"), 1, GL_FALSE, V);
 
 
-	glBindVertexArray(Va);
+	glBindVertexArray(vao);
 	glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 
 	glutSwapBuffers();
@@ -81,11 +81,16 @@ void idle()
 	}
 }
 
+void ReshapeFunc(int w, int h)
+{
+	glViewport(0, 0, w, h);
+}
+
 
 int main(int argc, char *argv[])
 {
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE | GLUT_STENCIL);
+	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE | GLUT_STENCIL | GLUT_MULTISAMPLE);
 	glutInitContextProfile(GLUT_CORE_PROFILE);
 	glutInitContextVersion(4, 3);
 	glutInitWindowSize(600, 600);
@@ -100,6 +105,7 @@ int main(int argc, char *argv[])
 	init();
 	glutDisplayFunc(display);
 	glutIdleFunc(idle);
+	glutReshapeFunc(ReshapeFunc);
 	glutMainLoop();
 	return 0;
 }

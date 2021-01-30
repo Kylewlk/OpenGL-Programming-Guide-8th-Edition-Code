@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="TriangleBall.g">
+    <None Include="TriangleBall.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="TriangleBall.v">
+    <None Include="TriangleBall.frag">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

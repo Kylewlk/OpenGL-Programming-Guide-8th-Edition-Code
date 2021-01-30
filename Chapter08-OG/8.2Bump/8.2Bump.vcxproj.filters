@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Bump.g">
+    <None Include="Bump.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="Bump.v">
+    <None Include="Bump.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

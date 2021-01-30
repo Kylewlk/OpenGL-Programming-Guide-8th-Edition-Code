@@ -18,8 +18,8 @@ void init()
 {
     ShaderInfo shaders[] =
     {
-        { GL_VERTEX_SHADER, "TriangleBall.v" },
-        { GL_FRAGMENT_SHADER, "TriangleBall.g" },
+        { GL_VERTEX_SHADER, "TriangleBall.vert" },
+        { GL_FRAGMENT_SHADER, "TriangleBall.frag" },
         { GL_NONE,"" }
     };
     Program = LoadShaders(shaders);

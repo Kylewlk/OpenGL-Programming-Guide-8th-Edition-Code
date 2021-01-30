@@ -16,8 +16,8 @@ void init()
 {
 	ShaderInfo shaders[] =
 	{
-		{ GL_VERTEX_SHADER, "Bump.v" },
-		{ GL_FRAGMENT_SHADER, "Bump.g" },
+		{ GL_VERTEX_SHADER, "Bump.vert" },
+		{ GL_FRAGMENT_SHADER, "Bump.frag" },
 		{ GL_NONE,"" }
 	};
 	Program = LoadShaders(shaders);

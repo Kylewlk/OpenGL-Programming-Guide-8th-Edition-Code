@@ -15,8 +15,8 @@ void init()
 {
     ShaderInfo shaders[] =
     {
-        { GL_VERTEX_SHADER, "Lattice.v" },
-        { GL_FRAGMENT_SHADER, "Lattice.g" },
+        { GL_VERTEX_SHADER, "Lattice.vert" },
+        { GL_FRAGMENT_SHADER, "Lattice.frag" },
         { GL_NONE,"" }
     };
     Program = LoadShaders(shaders);

@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Lattice.g">
+    <None Include="Lattice.frag">
       <Filter>头文件</Filter>
     </None>
-    <None Include="Lattice.v">
+    <None Include="Lattice.vert">
       <Filter>头文件</Filter>
     </None>
   </ItemGroup>

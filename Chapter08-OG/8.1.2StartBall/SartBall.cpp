@@ -15,8 +15,8 @@ void init()
 {
     ShaderInfo shaders[] =
     {
-        { GL_VERTEX_SHADER, "SartBall.v" },
-        { GL_FRAGMENT_SHADER, "SartBall.g" },
+        { GL_VERTEX_SHADER, "SartBall.vert" },
+        { GL_FRAGMENT_SHADER, "SartBall.frag" },
         { GL_NONE,"" }
     };
     Program = LoadShaders(shaders);

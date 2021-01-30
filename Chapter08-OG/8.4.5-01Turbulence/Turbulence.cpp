@@ -14,21 +14,21 @@ float Verts[] = {
 };
 //float Verts[] = { 0.0, 0.0,   0.9, 0.0,    0.9, 0.9,    0.0, 0.9 };
 
-GLuint Va;
+GLuint vao;
 GLuint vbo;
 
 void init()
 {
     ShaderInfo shaders[] =
     {
-        { GL_VERTEX_SHADER, "8.4.5Noise.v" },
-        { GL_FRAGMENT_SHADER, "8.4.5Noise.g" },
+        { GL_VERTEX_SHADER, "8.4.5Noise.vert" },
+        { GL_FRAGMENT_SHADER, "8.4.5Noise.frag" },
         { GL_NONE,"" }
     };
     Program = LoadShaders(shaders);
 
-    glGenVertexArrays(1, &Va);
-    glBindVertexArray(Va);
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(Verts), Verts, GL_STATIC_DRAW);
@@ -62,7 +62,7 @@ void display()
     glUniform1f(glGetUniformLocation(Program, "dt"), dt);
 
 
-    glBindVertexArray(Va);
+    glBindVertexArray(vao);
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 
     glutSwapBuffers();

@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="8.4.5Noise.v">
+    <None Include="8.4.5Noise.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="8.4.5Noise.g">
+    <None Include="8.4.5Noise.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

@@ -184,8 +184,8 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="stripeTex.g" />
-    <None Include="stripeTex.v" />
+    <None Include="stripeTex.frag" />
+    <None Include="stripeTex.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

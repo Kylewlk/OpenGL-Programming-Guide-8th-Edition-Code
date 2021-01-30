@@ -17,8 +17,8 @@ void init()
 {
 	ShaderInfo shaders[] =
 	{
-		{ GL_VERTEX_SHADER, "8.3.5Checkerboard.v" },
-		{ GL_FRAGMENT_SHADER, "8.3.5Checkerboard.g" },
+		{ GL_VERTEX_SHADER, "8.3.5Checkerboard.vert" },
+		{ GL_FRAGMENT_SHADER, "8.3.5Checkerboard.frag" },
 		{ GL_NONE,"" }
 	};
 	Program = LoadShaders(shaders);

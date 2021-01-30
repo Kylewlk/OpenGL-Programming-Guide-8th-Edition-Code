@@ -184,8 +184,8 @@
     <ClCompile Include="test_dFdx_dFdy.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="test_dFdx_dFdy.g" />
-    <None Include="test_dFdx_dFdy.v" />
+    <None Include="test_dFdx_dFdy.frag" />
+    <None Include="test_dFdx_dFdy.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

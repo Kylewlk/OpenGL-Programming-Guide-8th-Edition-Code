@@ -183,8 +183,8 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Lattice.g" />
-    <None Include="Lattice.v" />
+    <None Include="Lattice.frag" />
+    <None Include="Lattice.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

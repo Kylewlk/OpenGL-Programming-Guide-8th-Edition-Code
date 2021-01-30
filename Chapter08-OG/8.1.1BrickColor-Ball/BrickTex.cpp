@@ -15,8 +15,8 @@ void init()
 {
     ShaderInfo shaders[] =
     {
-        { GL_VERTEX_SHADER, "BrickTex.v" },
-        { GL_FRAGMENT_SHADER, "BrickTex.g" },
+        { GL_VERTEX_SHADER, "BrickTex.vert" },
+        { GL_FRAGMENT_SHADER, "BrickTex.frag" },
         { GL_NONE,"" }
     };
     Program = LoadShaders(shaders);
