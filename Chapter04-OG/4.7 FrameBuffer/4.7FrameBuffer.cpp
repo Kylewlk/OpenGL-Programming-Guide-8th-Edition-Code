@@ -53,7 +53,7 @@ void Init()
     glClearColor(0.2f, 0.1f, 0.3f, 1.0f);
     glUseProgram(Program);
 
-    glGenRenderbuffers(3, RendBuf);//两个颜色附件，一个帧缓存
+    glGenRenderbuffers(3, RendBuf);//两个颜色附件，一个深度缓存
     glBindRenderbuffer(GL_RENDERBUFFER, RendBuf[0]);
     glRenderbufferStorage(GL_RENDERBUFFER, GL_RGBA, 200, 200);
 

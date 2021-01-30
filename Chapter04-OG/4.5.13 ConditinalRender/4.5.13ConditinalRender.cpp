@@ -49,14 +49,13 @@ void Init()
 
     glClearColor(0.2f, 0.1f, 0.3f, 1.0f);
     glUseProgram(Program);
-
-    glEnable(GL_DEPTH_TEST);
 }
 
 void Display()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    glEnable(GL_DEPTH_TEST);
     glBindVertexArray(vert);
     glDrawArrays(GL_TRIANGLES, 0, 3);
 
@@ -69,6 +68,9 @@ void Display()
     glBeginQuery(GL_SAMPLES_PASSED, QueryIDs[1]);
     glDrawArrays(GL_TRIANGLES, 6, 3);
     glEndQuery(GL_SAMPLES_PASSED);
+
+    // 关闭深度测试测试条件渲染
+    glDisable(GL_DEPTH_TEST);
 
     glBeginConditionalRender(QueryIDs[0], GL_QUERY_WAIT);
     glDrawArrays(GL_TRIANGLES, 3, 3);

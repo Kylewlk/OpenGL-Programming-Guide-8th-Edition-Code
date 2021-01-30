@@ -112,10 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="UniformBlock.g">
+    <None Include="UniformBlock.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="UniformBlock.v">
+    <None Include="UniformBlock.frag">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

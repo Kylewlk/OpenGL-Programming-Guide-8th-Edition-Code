@@ -7,16 +7,16 @@
 
 
 GLuint Program;
-GLuint vert;
+GLuint vao;
 GLuint ubo;
 
 void init()
 {
-	ShaderInfo shaders[] = { {GL_VERTEX_SHADER, "UniformBlock.v"},{GL_FRAGMENT_SHADER, "UniformBlock.g"}, {GL_NONE, NULL} };
+	ShaderInfo shaders[] = { {GL_VERTEX_SHADER, "UniformBlock.vert"},{GL_FRAGMENT_SHADER, "UniformBlock.frag"}, {GL_NONE, NULL} };
 	Program = LoadShaders(shaders);
 
-	glGenVertexArrays(1, &vert);
-	glBindVertexArray(vert);
+	glGenVertexArrays(1, &vao);
+	glBindVertexArray(vao);
 	GLuint b, n[3]{ 0, 1, 2 };
 	glGenBuffers(1, &b);
 	glBindBuffer(GL_ARRAY_BUFFER, b);
@@ -60,13 +60,13 @@ void init()
 	glBindBufferBase(GL_UNIFORM_BUFFER, ubo, b);
 
 	glUseProgram(Program);
-	glClearColor(0.5, 0.0, 0.2, 1.0);
+	glClearColor(0.5f, 0.0f, 0.2f, 1.0f);
 }
 
 void display(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
-	glBindVertexArray(vert);
+	glBindVertexArray(vao);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 
 	glFlush();

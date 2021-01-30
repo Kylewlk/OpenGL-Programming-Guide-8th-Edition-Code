@@ -143,7 +143,7 @@ void Display()
 
 	if ((FrameCount % 2)  == 0)
 	{
-		glBindVertexArray(vaos[0]);
+		glBindVertexArray(vaos[0]);// 使用tbPoint[0]进行绘制，使用tbPoint[1]存储TransfromFeedback数据
 		glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, 0, tbPoint[1]);
 	}
 	else

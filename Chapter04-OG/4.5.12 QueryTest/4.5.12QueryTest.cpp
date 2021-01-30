@@ -64,6 +64,7 @@ void Display()
     static GLint samples[2] = { 0 };
     if (!isQuery)
     {
+        glEnable(GL_DEPTH_TEST);
 		//查询三角形是否被遮挡
         GLuint QueryIDs[2];
         glGenQueries(2, QueryIDs);
@@ -96,6 +97,8 @@ void Display()
         glDeleteQueries(2, QueryIDs);
         isQuery = true;
     }
+    // 关闭深度测试测试渲染查询
+    glDisable(GL_DEPTH_TEST);
     if (samples[0] > 0)//值大于0则未被完全遮挡
     {
         glDrawArrays(GL_TRIANGLES, 3, 3);
