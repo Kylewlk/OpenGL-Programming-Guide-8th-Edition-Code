@@ -115,13 +115,13 @@
     <None Include="quad.tese">
       <Filter>源文件</Filter>
     </None>
-    <None Include="quad.v">
-      <Filter>源文件</Filter>
-    </None>
-    <None Include="quad.g">
-      <Filter>源文件</Filter>
-    </None>
     <None Include="quad.tesc">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="quad.frag">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="quad.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

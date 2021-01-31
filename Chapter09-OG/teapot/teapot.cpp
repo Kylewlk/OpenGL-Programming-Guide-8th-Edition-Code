@@ -5,16 +5,16 @@
 #include "mat.h"
 #include "LoadShaders.h"
 #include "Shapes/Teapot.h"
-
+#include "vmath.h"
 using namespace std;
 
 GLuint  PLoc;  // Projection matrix
 GLuint  InnerLoc;  // Inner tessellation paramter
 GLuint  OuterLoc;  // Outer tessellation paramter
+GLuint  MVLoc; 
 
-GLfloat  Inner = 1.0;
-GLfloat  Outer = 1.0;
-
+GLfloat  Inner = 10.0;
+GLfloat  Outer = 10.0;
 //----------------------------------------------------------------------------
 
 void
@@ -58,14 +58,14 @@ init( void )
     PLoc = glGetUniformLocation( program, "P" );
     InnerLoc = glGetUniformLocation( program, "Inner" );
     OuterLoc = glGetUniformLocation( program, "Outer" );
+    MVLoc = glGetUniformLocation(program, "MV");
 
     glUniform1f( InnerLoc, Inner );
     glUniform1f( OuterLoc, Outer );
     
 	mat4  modelview = Translate( -0.2625f, -1.575f, -1.0f );
 	modelview *= Translate( 0.0f, 0.0f, -7.5f );
-    glUniformMatrix4fv( glGetUniformLocation( program, "MV" ),
-			1, GL_TRUE, modelview );
+    glUniformMatrix4fv( MVLoc, 1, GL_TRUE, modelview );
 
     glPatchParameteri( GL_PATCH_VERTICES, NumTeapotVerticesPerPatch );
     
@@ -78,9 +78,22 @@ void
 display( void )
 {
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-    glDrawElements( GL_PATCHES, NumTeapotVertices,
+    glEnable(GL_DEPTH_TEST);
+    static unsigned int Time = GetTickCount();
+    vmath::mat4 modle = vmath::translate(-0.2625f, -1.575f, -8.0f);
+
+    unsigned int timeNow = GetTickCount();
+    float dt = float((timeNow - Time) % 8000) / 1000.0f;
+    modle *= vmath::rotate(45.0f * dt, vmath::vec3(1.0f, 0.0f, 0.0f));
+    modle *= vmath::rotate(45.0f * dt, vmath::vec3(0.0f, 1.0f, 0.0f));
+    modle *= vmath::rotate(45.0f * dt, vmath::vec3(0.0f, 0.0f, 1.0f));
+    glUniformMatrix4fv(MVLoc, 1, GL_FALSE, modle);
+
+    glDrawElements( GL_PATCHES, NumTeapotIndices,
 		    GL_UNSIGNED_INT, BUFFER_OFFSET(0) );
     glutSwapBuffers();
+    glutPostRedisplay();
+    Sleep(30);
 }
 
 //----------------------------------------------------------------------------
@@ -156,7 +169,7 @@ main( int argc, char *argv[] )
     glutInit( &argc, argv );
     glutInitDisplayMode( GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE );
     glutInitWindowSize( 512, 512 );
-    glutInitContextVersion( 3, 2 );
+    glutInitContextVersion( 4, 3 );
     glutInitContextProfile( GLUT_CORE_PROFILE );
     glutCreateWindow( "teapot" );
 

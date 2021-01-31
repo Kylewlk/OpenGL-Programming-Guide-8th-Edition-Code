@@ -118,10 +118,10 @@
     <None Include="line.tese">
       <Filter>源文件</Filter>
     </None>
-    <None Include="line.v">
+    <None Include="line.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="line.g">
+    <None Include="line.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

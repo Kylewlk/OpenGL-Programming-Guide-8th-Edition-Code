@@ -19,10 +19,10 @@ GLfloat vert[]={ -0.9f, -0.9f,    0.9f, -0.9f,     0.9f, 0.9f,    -0.9f, 0.9f,
 void init()
 {
 	ShaderInfo si[] = {
-		{ GL_VERTEX_SHADER, "quad.v"},
+		{ GL_VERTEX_SHADER, "quad.vert"},
 		{GL_TESS_CONTROL_SHADER, "quad.tesc"},
 		{GL_TESS_EVALUATION_SHADER, "quad.tese"},
-		{ GL_FRAGMENT_SHADER, "quad.g"},
+		{ GL_FRAGMENT_SHADER, "quad.frag"},
 		{GL_NONE, ""}
 	};
 

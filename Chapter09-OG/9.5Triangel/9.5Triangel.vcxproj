@@ -184,10 +184,10 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Triangle.g" />
+    <None Include="Triangle.frag" />
     <None Include="Triangle.tesc" />
     <None Include="Triangle.tese" />
-    <None Include="Triangle.v" />
+    <None Include="Triangle.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

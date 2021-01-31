@@ -331,7 +331,7 @@ GLdouble TeapotVertices[NumTeapotVertices][3] = {
 //      Utah teapot.
 //
 
-GLint TeapotIndices[NumTeapotPatches][4][4] = {
+GLuint TeapotIndices[NumTeapotPatches][4][4] = {
     {
 	{0, 1, 2, 3},
 	{4, 5, 6, 7},

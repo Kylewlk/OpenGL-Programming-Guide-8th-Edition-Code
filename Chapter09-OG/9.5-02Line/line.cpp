@@ -19,10 +19,10 @@ GLfloat vert[]={ -0.9f, -0.9f,    0.9f, -0.9f,     0.9f, 0.9f,    -0.9f, 0.9f,
 void init()
 {
 	ShaderInfo si[] = {
-		{ GL_VERTEX_SHADER, "line.v"},
+		{ GL_VERTEX_SHADER, "line.vert"},
 		{GL_TESS_CONTROL_SHADER, "line.tesc"},
 		{GL_TESS_EVALUATION_SHADER, "line.tese"},
-		{ GL_FRAGMENT_SHADER, "line.g"},
+		{ GL_FRAGMENT_SHADER, "line.frag"},
 		{GL_NONE, ""}
 	};
 

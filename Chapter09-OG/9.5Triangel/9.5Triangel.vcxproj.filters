@@ -118,10 +118,10 @@
     <None Include="Triangle.tese">
       <Filter>源文件</Filter>
     </None>
-    <None Include="Triangle.v">
+    <None Include="Triangle.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="Triangle.g">
+    <None Include="Triangle.frag">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

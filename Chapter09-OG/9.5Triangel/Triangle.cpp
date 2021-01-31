@@ -19,10 +19,10 @@ GLfloat vert[]={ -0.9f, -0.9f,    0.9f, -0.9f,     0.9f, 0.9f,    -0.9f, 0.9f,
 void init()
 {
 	ShaderInfo si[] = {
-		{ GL_VERTEX_SHADER, "Triangle.v"},
+		{ GL_VERTEX_SHADER, "Triangle.vert"},
 		{GL_TESS_CONTROL_SHADER, "Triangle.tesc"},
 		{GL_TESS_EVALUATION_SHADER, "Triangle.tese"},
-		{ GL_FRAGMENT_SHADER, "Triangle.g"},
+		{ GL_FRAGMENT_SHADER, "Triangle.frag"},
 		{GL_NONE, ""}
 	};
 
