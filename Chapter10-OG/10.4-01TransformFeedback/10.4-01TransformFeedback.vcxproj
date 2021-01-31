@@ -183,9 +183,9 @@
     <ClInclude Include="..\..\include\vutils.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="TransformTriangle.g" />
+    <None Include="TransformTriangle.frag" />
     <None Include="TransformTriangle.geom" />
-    <None Include="TransformTriangle.v" />
+    <None Include="TransformTriangle.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

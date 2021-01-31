@@ -184,11 +184,11 @@
     <ClInclude Include="vbm.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fur.g" />
+    <None Include="fur.frag" />
     <None Include="fur.geom" />
-    <None Include="fur.v" />
-    <None Include="object.g" />
-    <None Include="object.v" />
+    <None Include="fur.vert" />
+    <None Include="object.frag" />
+    <None Include="object.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

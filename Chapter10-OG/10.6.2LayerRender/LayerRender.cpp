@@ -32,8 +32,8 @@ void init()
 {
 	ShaderInfo shaders[] =
 	{
-		{ GL_VERTEX_SHADER, "render.v" },
-		{ GL_FRAGMENT_SHADER, "render.g" },
+		{ GL_VERTEX_SHADER, "render.vert" },
+		{ GL_FRAGMENT_SHADER, "render.frag" },
 		{ GL_NONE,"" }
 	};
 	Program = LoadShaders(shaders);

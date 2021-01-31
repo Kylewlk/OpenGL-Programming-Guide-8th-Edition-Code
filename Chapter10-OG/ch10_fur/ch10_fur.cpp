@@ -40,7 +40,7 @@ void FurApplication::Initialize(const char * title)
     base::Initialize(title);
 
 
-	ShaderInfo base_si[] = { { GL_VERTEX_SHADER , "object.v"}, { GL_FRAGMENT_SHADER , "object.g"} , { GL_NONE , ""} };
+	ShaderInfo base_si[] = { { GL_VERTEX_SHADER , "object.vert"}, { GL_FRAGMENT_SHADER , "object.frag"} , { GL_NONE , ""} };
 	base_prog = LoadShaders(base_si);
 
     glUseProgram(base_prog);
@@ -49,7 +49,7 @@ void FurApplication::Initialize(const char * title)
     base_projection_matrix_pos = glGetUniformLocation(base_prog, "projection_matrix");
 
 
-	ShaderInfo fur_si[] = { { GL_VERTEX_SHADER , "fur.v" },{ GL_GEOMETRY_SHADER , "fur.geom" },{ GL_FRAGMENT_SHADER , "fur.g" } ,{ GL_NONE , "" } };
+	ShaderInfo fur_si[] = { { GL_VERTEX_SHADER , "fur.vert" },{ GL_GEOMETRY_SHADER , "fur.geom" },{ GL_FRAGMENT_SHADER , "fur.frag" } ,{ GL_NONE , "" } };
 	fur_prog = LoadShaders(fur_si);
 
     glUseProgram(fur_prog);

@@ -188,8 +188,8 @@
     <None Include="LayerRender.frag" />
     <None Include="LayerRender.geom" />
     <None Include="LayerRender.vert" />
-    <None Include="render.g" />
-    <None Include="render.v" />
+    <None Include="render.frag" />
+    <None Include="render.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

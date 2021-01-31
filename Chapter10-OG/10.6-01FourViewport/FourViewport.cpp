@@ -42,9 +42,9 @@ void init()
 {
 	ShaderInfo shader[] =
 	{
-		{ GL_VERTEX_SHADER, "FourViewport.v" },
+		{ GL_VERTEX_SHADER, "FourViewport.vert" },
 		{GL_GEOMETRY_SHADER, "FourViewport.geom"},
-		{ GL_FRAGMENT_SHADER, "FourViewport.g" },
+		{ GL_FRAGMENT_SHADER, "FourViewport.frag" },
 		{ GL_NONE, NULL }
 	};
 

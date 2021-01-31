@@ -44,7 +44,7 @@ void ViewportArrayApplication::Initialize(const char * title)
     glGenTransformFeedbacks(1, &xfb);
     glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, xfb);
 
-    ShaderInfo SortSi[] = { { GL_VERTEX_SHADER, "sort.v"}, { GL_GEOMETRY_SHADER, "sort.geom"}, {GL_NONE, ""} };
+    ShaderInfo SortSi[] = { { GL_VERTEX_SHADER, "sort.vert"}, { GL_GEOMETRY_SHADER, "sort.geom"}, {GL_NONE, ""} };
     sort_prog = LoadShaders(SortSi);
 
     static const char * varyings[] =
@@ -79,7 +79,7 @@ void ViewportArrayApplication::Initialize(const char * title)
         glEnableVertexAttribArray(1);
     }
 
-    ShaderInfo RenderSi[] = { { GL_VERTEX_SHADER, "render.v" },{ GL_FRAGMENT_SHADER, "render.g" },{ GL_NONE, "" } };
+    ShaderInfo RenderSi[] = { { GL_VERTEX_SHADER, "render.vert" },{ GL_FRAGMENT_SHADER, "render.frag" },{ GL_NONE, "" } };
     render_prog = LoadShaders(RenderSi);
 
     glLinkProgram(render_prog);

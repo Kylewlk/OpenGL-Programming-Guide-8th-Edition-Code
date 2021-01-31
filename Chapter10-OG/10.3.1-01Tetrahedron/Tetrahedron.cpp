@@ -21,9 +21,9 @@ GLfloat vert[] = {
 void init()
 {
     ShaderInfo si[] = {
-        { GL_VERTEX_SHADER, "Tetrahedron.v" },
+        { GL_VERTEX_SHADER, "Tetrahedron.vert" },
         { GL_GEOMETRY_SHADER, "Tetrahedron.geom" },
-        { GL_FRAGMENT_SHADER, "Tetrahedron.g" },
+        { GL_FRAGMENT_SHADER, "Tetrahedron.frag" },
         { GL_NONE, "" }
     };
 
@@ -69,6 +69,7 @@ void display()
     glEnable(GL_DEPTH_TEST);
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glProvokingVertex(GL_FIRST_VERTEX_CONVENTION);
+    //glProvokingVertex(GL_LAST_VERTEX_CONVENTION);
     glDrawArrays(GL_LINES_ADJACENCY, 0, 4); //GL_LINES_ADJACENCY 刚好有四个点输入几何着色器，
 
     glutSwapBuffers();

@@ -118,13 +118,13 @@
     <None Include="sort.geom">
       <Filter>源文件</Filter>
     </None>
-    <None Include="sort.v">
+    <None Include="render.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="render.g">
+    <None Include="render.vert">
       <Filter>源文件</Filter>
     </None>
-    <None Include="render.v">
+    <None Include="sort.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

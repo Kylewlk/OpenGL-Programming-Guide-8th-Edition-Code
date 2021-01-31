@@ -26,7 +26,7 @@ GLuint program2;
 void init()
 {
 	ShaderInfo si[] = {
-		{ GL_VERTEX_SHADER, "TransformTriangle.v" },
+		{ GL_VERTEX_SHADER, "TransformTriangle.vert" },
 		{ GL_GEOMETRY_SHADER, "TransformTriangle.geom" },
 		{ GL_NONE, "" }
 	};
@@ -38,8 +38,8 @@ void init()
 	glLinkProgram(program);
 
 	ShaderInfo si2[] = {
-		{ GL_VERTEX_SHADER, "TransformTriangle.v" },
-		{ GL_FRAGMENT_SHADER, "TransformTriangle.g" },
+		{ GL_VERTEX_SHADER, "TransformTriangle.vert" },
+		{ GL_FRAGMENT_SHADER, "TransformTriangle.frag" },
 		{ GL_NONE, "" }
 	};
 	program2 = LoadShaders(si2);

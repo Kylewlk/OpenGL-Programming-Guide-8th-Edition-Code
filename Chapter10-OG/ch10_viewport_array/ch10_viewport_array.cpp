@@ -40,7 +40,7 @@ void ViewportArrayApplication::Initialize(const char * title)
     base::Initialize(title);
 
 
-	ShaderInfo si[] = { { GL_VERTEX_SHADER,"viewport.v" },{ GL_GEOMETRY_SHADER ,"viewport.geom" },{ GL_FRAGMENT_SHADER,"viewport.g" },{GL_NONE, ""} };
+	ShaderInfo si[] = { { GL_VERTEX_SHADER,"viewport.vert" },{ GL_GEOMETRY_SHADER ,"viewport.geom" },{ GL_FRAGMENT_SHADER,"viewport.frag" },{GL_NONE, ""} };
     prog = LoadShaders(si);
     glUseProgram(prog);
 

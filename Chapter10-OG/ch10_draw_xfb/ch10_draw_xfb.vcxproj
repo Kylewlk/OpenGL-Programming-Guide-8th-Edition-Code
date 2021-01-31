@@ -184,10 +184,10 @@
     <ClInclude Include="vbm.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="render.g" />
-    <None Include="render.v" />
+    <None Include="render.frag" />
+    <None Include="render.vert" />
     <None Include="sort.geom" />
-    <None Include="sort.v" />
+    <None Include="sort.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

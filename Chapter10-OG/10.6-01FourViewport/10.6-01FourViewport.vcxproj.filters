@@ -118,10 +118,10 @@
     <None Include="FourViewport.geom">
       <Filter>源文件</Filter>
     </None>
-    <None Include="FourViewport.v">
+    <None Include="FourViewport.frag">
       <Filter>源文件</Filter>
     </None>
-    <None Include="FourViewport.g">
+    <None Include="FourViewport.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

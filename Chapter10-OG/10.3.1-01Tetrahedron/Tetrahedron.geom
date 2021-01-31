@@ -10,7 +10,7 @@ in vec4 VsGsColor[];
 
 
 flat out vec4 GsColor;
-
+ 
 void main()
 {
 	int n = 0;
@@ -18,8 +18,8 @@ void main()
 	{	
 		for(int j = 0; j < 3; ++j)
 		{
-			gl_Position = modelMatrix*gl_in[(j+i)%gl_PatchVerticesIn].gl_Position;
-			GsColor = VsGsColor[(j+i)%gl_PatchVerticesIn];
+			gl_Position = modelMatrix*gl_in[(j+i)%gl_in.length()].gl_Position;
+			GsColor = VsGsColor[(j+i)%gl_in.length()];
 			EmitVertex();
 		}
 		EndPrimitive();

@@ -112,13 +112,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Tetrahedron.g">
-      <Filter>源文件</Filter>
-    </None>
     <None Include="Tetrahedron.geom">
       <Filter>源文件</Filter>
     </None>
-    <None Include="Tetrahedron.v">
+    <None Include="Tetrahedron.vert">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="Tetrahedron.frag">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

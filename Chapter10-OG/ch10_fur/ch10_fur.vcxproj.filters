@@ -115,19 +115,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="object.g">
-      <Filter>源文件</Filter>
-    </None>
-    <None Include="object.v">
-      <Filter>源文件</Filter>
-    </None>
-    <None Include="fur.g">
-      <Filter>源文件</Filter>
-    </None>
     <None Include="fur.geom">
       <Filter>源文件</Filter>
     </None>
-    <None Include="fur.v">
+    <None Include="fur.frag">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="fur.vert">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="object.frag">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="object.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

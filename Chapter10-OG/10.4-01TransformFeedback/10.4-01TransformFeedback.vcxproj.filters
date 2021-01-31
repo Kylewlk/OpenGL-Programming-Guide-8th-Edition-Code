@@ -112,13 +112,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="TransformTriangle.g">
-      <Filter>源文件</Filter>
-    </None>
     <None Include="TransformTriangle.geom">
       <Filter>源文件</Filter>
     </None>
-    <None Include="TransformTriangle.v">
+    <None Include="TransformTriangle.frag">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="TransformTriangle.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

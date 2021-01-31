@@ -115,13 +115,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="viewport.g">
-      <Filter>源文件</Filter>
-    </None>
     <None Include="viewport.geom">
       <Filter>源文件</Filter>
     </None>
-    <None Include="viewport.v">
+    <None Include="viewport.frag">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="viewport.vert">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

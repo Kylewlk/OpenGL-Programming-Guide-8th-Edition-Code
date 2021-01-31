@@ -185,9 +185,9 @@
     <ClInclude Include="vbm.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FourViewport.g" />
+    <None Include="FourViewport.frag" />
     <None Include="FourViewport.geom" />
-    <None Include="FourViewport.v" />
+    <None Include="FourViewport.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
