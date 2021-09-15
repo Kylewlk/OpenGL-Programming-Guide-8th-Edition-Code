@@ -1,6 +1,6 @@
 #version 430 core
 
-uniform Vertice
+layout(binding = 3) uniform Vertice
 {
 	vec4 v[3];
 	vec4 color;
