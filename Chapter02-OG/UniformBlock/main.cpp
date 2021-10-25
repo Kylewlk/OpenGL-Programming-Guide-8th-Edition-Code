@@ -46,6 +46,7 @@ void init()
 
 	//验证结构体sDtata，与uniform块格式是否一致。
 	char *names[] = { "v", "color" };
+	//char *names[] = { "Named.v", "Named.color" };
 	GLuint Index[2];
 	GLint offset[2];
 	glGetUniformIndices(Program, 2, names, Index);
